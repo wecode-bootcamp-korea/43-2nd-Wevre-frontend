@@ -1,7 +1,3 @@
-import React from 'react';
+const theme = {};
 
-const Theme = () => {
-  return <div>Theme</div>;
-};
-
-export default Theme;
+export default theme;
