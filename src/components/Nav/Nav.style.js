@@ -9,6 +9,7 @@ export const NavContainer = styled.div`
   width: 100%;
   height: 140px;
   border-bottom: 1px solid #e2ddd9;
+  z-index: 99;
 `;
 
 export const NavWrapper = styled.div`
