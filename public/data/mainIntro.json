@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "회화",
+    "imgUrl": "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+    "contents": "한국의 신인 화가부터 거장까지 오직 Wevre에서만 만날 수 있는 master pieces를 지금 바로 만나보세요.",
+    "position": "left"
+  },
+  {
+    "id": 2,
+    "title": "사진",
+    "imgUrl": "https://images.unsplash.com/photo-1621328406204-01060d16bf24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
+    "contents": "한국의 프로 사진작가들의 전 세계 곳곳을 누비며 담아낸 그 당시의 정서가 사진에 고스란히 담겨있습니다.",
+    "position": "right"
+  },
+  {
+    "id": 3,
+    "title": "조각",
+    "imgUrl": "https://images.unsplash.com/photo-1574359587026-daf1bfd26baa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    "contents": "멋드러진 선과 굴곡을 오로지 손 끝의 감각에 의존해서 만들어낸 이 시대의 멋진 조각품들을 만나보러 갈까요?",
+    "position": "left"
+  },
+  {
+    "id": 4,
+    "title": "공예",
+    "imgUrl": "https://images.unsplash.com/photo-1506806732259-39c2d0268443?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80",
+    "contents": "한국 민속촌, 인사동 등 대한민국에서는 아직도 공예품을 만드는 장인들이 있습니다. 오랜 역사와 전통을 자랑하는 우리나라 공예품을 만나보는건 어떨까요?",
+    "position": "right"
+  }
+]
