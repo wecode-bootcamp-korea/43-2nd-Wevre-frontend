@@ -1,50 +1,88 @@
-[
-  {
-    "id": 1,
-    "title": "나의 일상",
-    "artist": "유정인",
-    "year": "2022",
-    "width": "22",
-    "height": "19",
-    "weight": "23",
-    "number": "KDWE656865",
-    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
-    "image": "https://images.unsplash.com/photo-1598305595821-dfc051010513?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-  },
-  {
-    "id": 2,
-    "title": "오 나의 형제",
-    "artist": "오지수",
-    "year": "2022",
-    "width": "22",
-    "height": "19",
-    "weight": "23",
-    "number": "KDWE656865",
-    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
-    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/35.avif"
-  },
-  {
-    "id": 3,
-    "title": "여우같은",
-    "artist": "이창섭",
-    "year": "2022",
-    "width": "22",
-    "height": "19",
-    "weight": "23",
-    "number": "KDWE656865",
-    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
-    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/15.avif"
-  },
-  {
-    "id": 4,
-    "title": "분화구",
-    "artist": "유정인",
-    "year": "2022",
-    "width": "22",
-    "height": "19",
-    "weight": "23",
-    "number": "KDWE656865",
-    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
-    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/14.avif"
-  }
-]
+{
+  "bids": [
+    {
+      "bidId": 14,
+      "itemId": 62,
+      "itemName": "예쁨",
+      "authorName": "김미수",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/items/1680270154673_photo-1603561591411-07134e71a2a9.avif",
+      "biddingEnd": "2023년 4월 3일 3시 25분 0초",
+      "bidStatus": "입찰중",
+      "startingBid": "200,000원",
+      "myLastBidPrice": "100,000원",
+      "currentPrice": "100,000원"
+    },
+    {
+      "bidId": 13,
+      "itemId": 36,
+      "itemName": "새벽 1시",
+      "authorName": "유정인",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/36.avif",
+      "biddingEnd": "2023년 4월 4일 0시 0분 0초",
+      "bidStatus": "입찰중",
+      "startingBid": "9,131,500원",
+      "myLastBidPrice": "500,000원",
+      "currentPrice": "500,000원"
+    },
+    {
+      "bidId": 12,
+      "itemId": 56,
+      "itemName": "예쁨",
+      "authorName": "김미수",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/items/1680254603143_photo-1603561591411-07134e71a2a9.avif",
+      "biddingEnd": "2023년 3월 31일 20시 7분 0초",
+      "bidStatus": "낙찰완료",
+      "startingBid": "200,000원",
+      "myLastBidPrice": "500,000원",
+      "currentPrice": "500,000원"
+    },
+    {
+      "bidId": 7,
+      "itemId": 1,
+      "itemName": "흔들림",
+      "authorName": "김이젤",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/1.avif",
+      "biddingEnd": "2023년 3월 30일 23시 16분 0초",
+      "bidStatus": "낙찰완료",
+      "startingBid": "3,460,000원",
+      "myLastBidPrice": "700,000원",
+      "currentPrice": "800,000원"
+    },
+    {
+      "bidId": 6,
+      "itemId": 4,
+      "itemName": "별들이",
+      "authorName": "화려",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/4.avif",
+      "biddingEnd": "2023년 4월 4일 0시 0분 0초",
+      "bidStatus": "입찰중",
+      "startingBid": "3,120,000원",
+      "myLastBidPrice": "500,000원",
+      "currentPrice": "500,000원"
+    },
+    {
+      "bidId": 5,
+      "itemId": 3,
+      "itemName": "경청",
+      "authorName": "주시아",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/3.avif",
+      "biddingEnd": "2023년 4월 4일 0시 0분 0초",
+      "bidStatus": "입찰중",
+      "startingBid": "1,952,000원",
+      "myLastBidPrice": "200,000원",
+      "currentPrice": "200,000원"
+    },
+    {
+      "bidId": 4,
+      "itemId": 2,
+      "itemName": "크레센트",
+      "authorName": "이승희",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/2.avif",
+      "biddingEnd": "2023년 4월 4일 0시 0분 0초",
+      "bidStatus": "입찰중",
+      "startingBid": "2,450,000원",
+      "myLastBidPrice": "100,000원",
+      "currentPrice": "100,000원"
+    }
+  ]
+}
