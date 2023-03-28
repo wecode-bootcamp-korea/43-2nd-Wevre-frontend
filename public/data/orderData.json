@@ -1,0 +1,15 @@
+{
+  "orders": [
+    {
+      "bidId": 14,
+      "userName": "김수현",
+      "userEmail": "93cherry@naver.com",
+      "itemName": "예쁨",
+      "authorName": "김미수",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/items/1680270154673_photo-1603561591411-07134e71a2a9.avif",
+      "bidPrice": "100,000원",
+      "shippingFee": "100,000원",
+      "totalPrice": "200,000원"
+    }
+  ]
+}
