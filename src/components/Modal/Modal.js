@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { useResetRecoilState } from 'recoil';
+import { setModal } from '../../recoil';
+import SignIn from '../../pages/SignIn/SignIn';
+import Participate from '../../pages/Participate/Participate';
+import Bid from '../../pages/Mypage/Bid/Bid';
 import * as S from './Modal.style';
 
-const Modal = ({ usage, data }) => {
-  //usage는 어떤 목적으로 모달창이 사용될 것인지 정하는 변수
-  //data는 모달창 구현에 필요한 data가 담긴 변수이다.
-  //두 변수는 추후에 어떤 용도로 모달을 활용하는지에 대해 구분하기 위해 사용한다.
-
+const Modal = props => {
+  const { usage, data } = props.data;
   const [height, setHeight] = useState(window.innerHeight);
   const modalRef = useRef();
+  const closeModal = useResetRecoilState(setModal);
+
+  const purposeOfModal = {
+    login: <SignIn data={data} />,
+    participate: <Participate data={data} />,
+    bid: <Bid data={data} />,
+  };
 
   useEffect(() => {
     modalRef.current.style.height = height.toString() + 'px';
@@ -26,9 +35,9 @@ const Modal = ({ usage, data }) => {
   });
 
   return (
-    <S.ModalContainer ref={modalRef}>
-      <S.ModalMain>
-        <S.ModalInner />
+    <S.ModalContainer ref={modalRef} onClick={closeModal}>
+      <S.ModalMain onClick={e => e.stopPropagation()}>
+        <S.ModalInner>{purposeOfModal[usage]}</S.ModalInner>
       </S.ModalMain>
     </S.ModalContainer>
   );
