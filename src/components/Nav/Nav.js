@@ -1,16 +1,27 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
+import { useRecoilState } from 'recoil';
+import { isLoginedState, setModal } from '../../recoil';
+import Modal from '../Modal/Modal';
+import ModalPortal from '../Modal/Portal/Portal';
 import * as S from './Nav.style';
 
 const Nav = () => {
+  const [isLogined, setIsLogined] = useRecoilState(isLoginedState);
+  const [modalOpen, setModalOpen] = useRecoilState(setModal);
   const navigate = useNavigate();
-  const login_token = localStorage.getItem('login-token');
 
   const logout = () => {
     localStorage.removeItem('login-token');
+    setIsLogined(false);
     navigate('/');
   };
+
+  const openModal = () => {
+    setModalOpen({ ...modalOpen, isOpenModal: true, usage: 'login', data: {} });
+  };
+
   return (
     <S.NavContainer>
       <S.NavWrapper>
@@ -20,14 +31,14 @@ const Nav = () => {
         <S.MenuList>
           {MENU_LIST.map(({ id, text, link }) => {
             if (id === 2) {
-              return login_token ? (
+              return isLogined ? (
                 <S.StyledMenuLink key={id} onClick={logout}>
                   {text[1]}
                 </S.StyledMenuLink>
               ) : (
-                <S.StyledLink key={id} to={link}>
+                <S.StyledMenuLink key={id} onClick={openModal}>
                   {text[0]}
-                </S.StyledLink>
+                </S.StyledMenuLink>
               );
             } else {
               return (
@@ -42,6 +53,9 @@ const Nav = () => {
           </S.StyledLink>
         </S.MenuList>
       </S.NavWrapper>
+      <ModalPortal>
+        {modalOpen.isOpenModal && <Modal data={modalOpen} />}
+      </ModalPortal>
     </S.NavContainer>
   );
 };
