@@ -2,7 +2,7 @@ import { atom } from 'recoil';
 
 export const isLoginedState = atom({
   key: 'isLogined',
-  default: false,
+  default: localStorage.getItem('login-token') ? true : false,
 });
 
 export const setModal = atom({
