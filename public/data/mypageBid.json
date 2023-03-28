@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "나의 일상",
+    "artist": "유정인",
+    "year": "2022",
+    "width": "22",
+    "height": "19",
+    "weight": "23",
+    "number": "KDWE656865",
+    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
+    "image": "https://images.unsplash.com/photo-1598305595821-dfc051010513?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  },
+  {
+    "id": 2,
+    "title": "오 나의 형제",
+    "artist": "오지수",
+    "year": "2022",
+    "width": "22",
+    "height": "19",
+    "weight": "23",
+    "number": "KDWE656865",
+    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
+    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/35.avif"
+  },
+  {
+    "id": 3,
+    "title": "여우같은",
+    "artist": "이창섭",
+    "year": "2022",
+    "width": "22",
+    "height": "19",
+    "weight": "23",
+    "number": "KDWE656865",
+    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
+    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/15.avif"
+  },
+  {
+    "id": 4,
+    "title": "분화구",
+    "artist": "유정인",
+    "year": "2022",
+    "width": "22",
+    "height": "19",
+    "weight": "23",
+    "number": "KDWE656865",
+    "account": "모든 이의 말을 경청하라는 작가의 의도에 따라 평소 작가의 철학적인 삶의 태도를 엿볼 수 있습니다. 모든 이를 존중하며 자리에 일어나 경청하는 모습의 작품은 그 크기로 범접할 수 없는 위압감을 느껴지게 만들기도 합니다.",
+    "image": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/14.avif"
+  }
+]
