@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from './Banner/Banner';
-import * as S from './Main.style';
 import introVideo from '../../assets/images/Main.mp4';
+import * as S from './Main.style';
 
 const Main = () => {
   const [bannerData, setBannerData] = useState([]);
