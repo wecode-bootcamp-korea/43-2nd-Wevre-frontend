@@ -3,9 +3,14 @@ import * as S from './Banner.style';
 import MuiButton from '@mui/material/Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = ({ data }) => {
-  const { position, imgUrl, contents, title } = data;
+  const navigate = useNavigate();
+  const { id, position, imgUrl, contents, title } = data;
+  const moveToStore = () => {
+    navigate(`/store/${id}`);
+  };
 
   const imageContainer = (
     <S.BannerImageWrapper position={position}>
@@ -16,7 +21,10 @@ const Banner = ({ data }) => {
   const contentsContainer = (
     <S.BannerContentsWrapper position={position}>
       <S.BannerContents>{contents}</S.BannerContents>
-      <MuiButton variant="contained"> {title} 작품 감상</MuiButton>
+      <MuiButton variant="contained" onClick={moveToStore}>
+        {' '}
+        {title} 작품 감상
+      </MuiButton>
     </S.BannerContentsWrapper>
   );
 
