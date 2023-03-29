@@ -14,7 +14,7 @@ const Main = () => {
   return (
     <S.MainContainer>
       <S.IntroVideo>
-        <S.StyledVideo src={introVideo} autoPlay muted controls loop />
+        <S.StyledVideo src={introVideo} autoPlay muted loop />
       </S.IntroVideo>
       <S.BannerWrapper>
         {bannerData &&
