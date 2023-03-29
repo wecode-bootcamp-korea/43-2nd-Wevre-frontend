@@ -21,7 +21,6 @@ const Router = () => {
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/search" element={<Search />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/store/:cateCode" element={<Store />} />
       </Routes>
       <Footer />
     </BrowserRouter>
