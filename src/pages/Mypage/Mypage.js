@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import BASE_URL from '../../config';
 import UserInfo from './UserInfo/UserInfo';
 import Bid from './Bid/Bid';
 import BuyerQual from './BuyerQualification/BuyerQualification';
 import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
-import { MYPAGE_CATEGORY } from './MYPAGE_CATEGORY';
+import SalesHistory from './SalesHistory/SalesHistory';
+import Wishlist from './Wishlist/Wishlist';
+import { SUB_TITLE } from './SUB_TITLE';
 import { List, ListItemButton, ListItemText } from '@mui/material';
 import * as S from './Mypage.style';
 
@@ -13,10 +16,12 @@ const Mypage = () => {
 
   const ContentsComponents = {
     0: <UserInfo id={id} />,
-    1: <Bid id={id} />,
-    2: <BuyerQual id={id} />,
-    3: <Purchase id={id} />,
-    4: <SellerQual id={id} />,
+    1: <BuyerQual id={id} />,
+    2: <SellerQual id={id} />,
+    3: <Bid id={id} />,
+    4: <Purchase id={id} />,
+    5: <SalesHistory id={id} />,
+    6: <Wishlist id={id} />,
   };
 
   const handleCategory = id => {
@@ -26,34 +31,26 @@ const Mypage = () => {
   return (
     <S.Section>
       <S.Category>
-        {MYPAGE_CATEGORY.map(({ title }, id) => {
-          return (
-            <List key={id}>
-              <ListItemButton
-                sx={{
-                  display: 'flex',
-                  height: '10vh',
-                  width: '80%',
-                  marginLeft: '10%',
-                  border: 'none',
-                  borderRadius: 5,
-                  color: 'rgba(0, 0, 0, 0.7)',
-                  backgroundColor: '#c0b4d6',
-                }}
-                onClick={() => handleCategory(id)}
-              >
-                <ListItemText
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {title}
-                </ListItemText>
-              </ListItemButton>
-            </List>
-          );
-        })}
+        <S.CategoryTitle>마이페이지</S.CategoryTitle>
+        {Object.entries(SUB_TITLE).map(([title, list]) => (
+          <>
+            <S.CategorySubTitle>{title}</S.CategorySubTitle>
+            {list.map(({ value, id }) => (
+              <List sx={{ height: '4vh' }} key={id}>
+                <ListItemButton onClick={() => handleCategory(id)}>
+                  <ListItemText
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'left',
+                    }}
+                  >
+                    <S.ListText>{value}</S.ListText>
+                  </ListItemText>
+                </ListItemButton>
+              </List>
+            ))}
+          </>
+        ))}
       </S.Category>
       <S.Content>{ContentsComponents[id]}</S.Content>
     </S.Section>
