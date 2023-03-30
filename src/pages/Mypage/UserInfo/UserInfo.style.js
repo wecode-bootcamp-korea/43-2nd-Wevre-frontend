@@ -10,7 +10,8 @@ export const CategoryContainer = styled.div`
 `;
 
 export const UserInfoBox = styled.div`
-  ${theme.mixins.flexBox('center', 'center')}
+  display: flex;
+  justify-content: space-around;
   height: 30%;
   width: 100%;
   margin-bottom: 50px;
@@ -24,6 +25,22 @@ export const Title = styled.h1`
 export const UserInfoDetail = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const UserQaulDetail = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const UserQaulDetailTitle = styled.h1`
+  font-size: 16px;
+  line-height: 20px;
+`;
+
+export const UserQaulDetailText = styled.h2`
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
 `;
 
 export const UserInfoDetailBox = styled.div`
