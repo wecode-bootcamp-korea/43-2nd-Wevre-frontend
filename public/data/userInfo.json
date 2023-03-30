@@ -1,0 +1,14 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "eiselle@gmail.com",
+      "name": "김이젤",
+      "bankName": "우리은행",
+      "bankAccount": "1002-987-456254",
+      "artistRegistration": "IGA-421",
+      "bidAgreement": "동의",
+      "createdAt": "2023년 3월 28일 14시 25분 42초"
+    }
+  ]
+}
