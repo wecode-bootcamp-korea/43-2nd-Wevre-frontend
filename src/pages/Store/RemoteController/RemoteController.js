@@ -1,13 +1,14 @@
 import React from 'react';
 import useFetch from '../../../hooks/useFetch';
-import * as S from './RemoteController.style';
 import WishList from './WishList/WishList';
+import { API } from '../../../config';
+import * as S from './RemoteController.style';
 
 const RemoteController = () => {
   // FIXME - test url
-  const url = '/data/wishList.json';
+  //const url = '/data/wishList.json';
 
-  const { loading, data } = useFetch(url);
+  const { loading, data } = useFetch(`${API.WISHLIST}`);
 
   return (
     <S.RcContainer>

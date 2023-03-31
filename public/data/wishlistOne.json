@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "item_id": 1,
+      "author_name": "이창섭",
+      "item_name": "분화구",
+      "production_year": 1992,
+      "materials": ["캔버스", "종이", "유화물감"],
+      "width": "100.00",
+      "length": "54.00",
+      "height": "1.50",
+      "weight": "0.30000",
+      "description": "폭발의 잔해로 남은 분화구",
+      "starting_bid": "2750000.00",
+      "image_url": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/10.avif"
+    },
+    {
+      "item_id": 2,
+      "author_name": "강혁주",
+      "item_name": "여우",
+      "production_year": 1985,
+      "materials": ["유화물감", "콘크리트"],
+      "width": "72.00",
+      "length": "23.00",
+      "height": "3.70",
+      "weight": "0.67000",
+      "description": "어미 여우와 새끼 여우",
+      "starting_bid": "3152000.00",
+      "image_url": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/15.avif"
+    },
+    {
+      "item_id": 3,
+      "author_name": "류승준",
+      "item_name": "물고기",
+      "production_year": 1990,
+      "materials": ["도료", "이젤"],
+      "width": "21.00",
+      "length": "13.00",
+      "height": "2.70",
+      "weight": "0.42000",
+      "description": "입을 벌리고 있는 세 마리의 물고기\"",
+      "starting_bid": "3182000.00",
+      "image_url": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/16.avif"
+    }
+  ]
+}
