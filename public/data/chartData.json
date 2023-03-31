@@ -1,0 +1,30 @@
+[
+  {
+    "price": "350000.00",
+    "price_change_rate": "0"
+  },
+  {
+    "price": "380000.00",
+    "price_change_rate": "8.57"
+  },
+  {
+    "price": "404000.00",
+    "price_change_rate": "6.32"
+  },
+  {
+    "price": "405000.00",
+    "price_change_rate": "0.25"
+  },
+  {
+    "price": "420000.00",
+    "price_change_rate": "3.70"
+  },
+  {
+    "price": "550000.00",
+    "price_change_rate": "30.95"
+  },
+  {
+    "price": "550010.00",
+    "price_change_rate": "0.00"
+  }
+]

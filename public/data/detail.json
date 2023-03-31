@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "author_name": "이창섭",
+      "item_name": "분화구",
+      "production_year": 1992,
+      "materials": ["캔버스", "종이", "유화물감"],
+      "width": "100.00",
+      "length": "54.00",
+      "height": "1.50",
+      "weight": "0.30000",
+      "description": "폭발의 잔해로 남은 분화구",
+      "starting_bid": "2750000.00",
+      "image_url": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/10.avif"
+    }
+  ]
+}
