@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 2,
+      "sellerId": 1,
+      "sellerName": "김이젤",
+      "categoryName": "공예",
+      "itemName": "흔들림",
+      "authorName": "김이젤",
+      "productionYear": "2016년",
+      "width": "3.40cm",
+      "length": "8.20cm",
+      "height": "2.90cm",
+      "weight": "0.010kg",
+      "materialsName": ["진주", "금"],
+      "adminNumber": "CWDE521746",
+      "description": "18개의 진주 방울이 각각 다른 방향으로 흔들려 그 물결이 폭넓은 파장을 일으킨다.",
+      "imageUrl": "https://wevre.s3.ap-northeast-2.amazonaws.com/Items/1.avif",
+      "startingBid": "3,460,000원",
+      "biddingStart": "2023년 3월 28일 0시 0분 0초",
+      "biddingEnd": "2023년 4월 4일 0시 0분 0초",
+      "createdAt": "2023년 3월 28일 15시 44분 0초"
+    }
+  ]
+}
