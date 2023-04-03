@@ -8,6 +8,7 @@ import Mypage from './pages/Mypage/Mypage';
 import Search from './pages/Search/Search';
 import Store from './pages/Store/Store';
 import Redirect from './pages/SignIn/Redirect/Redirect';
+import Order from './pages/Mypage/Order/Order';
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/store" element={<Store />} />
         <Route path="/store/:cateCode" element={<Store />} />
+        <Route path="/order" element={<Order />} />
       </Routes>
       <Footer />
     </BrowserRouter>
