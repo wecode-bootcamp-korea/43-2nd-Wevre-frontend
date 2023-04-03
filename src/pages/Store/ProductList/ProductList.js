@@ -56,9 +56,11 @@ const ProductList = () => {
     }
   };
   useEffect(() => {
-    window.addEventListener('scroll', infinityScrollListener);
+    if (categoryId) {
+      window.addEventListener('scroll', infinityScrollListener);
 
-    return () => window.removeEventListener('scroll', infinityScrollListener);
+      return () => window.removeEventListener('scroll', infinityScrollListener);
+    }
   }, [itemList]);
 
   return (
