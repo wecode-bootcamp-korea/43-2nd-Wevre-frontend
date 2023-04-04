@@ -6,7 +6,7 @@ import * as S from './BuyerQualification.style';
 
 const BuyerQualification = () => {
   const handleAgreeButton = () => {
-    fetch(`${API.BUYER}`, {
+    fetch(API.BUYER, {
       method: 'PATCH',
     })
       .then(res => res.json())
@@ -26,7 +26,12 @@ const BuyerQualification = () => {
       </S.BuyerTextBox>
       <Button
         onClick={() => handleAgreeButton()}
-        sx={{ width: '200px', height: '50px' }}
+        sx={{
+          height: 50,
+          width: 150,
+          fontSize: 15,
+          marginBottom: '100px',
+        }}
         variant="contained"
       >
         동의
