@@ -5,7 +5,7 @@ import BuyerQual from './BuyerQualification/BuyerQualification';
 import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
 import SalesHistory from './SalesHistory/SalesHistory';
-// import SalesRegistration from './SalesRegistration/SalesRegistration';
+import SalesRegistration from './SalesRegistration/SalesRegistration';
 import { SUB_TITLE } from './SUB_TITLE';
 import { List } from '@mui/material';
 import { Button } from '@mui/joy';
@@ -21,7 +21,7 @@ const Mypage = () => {
     3: <Bid />,
     4: <Purchase />,
     5: <SalesHistory />,
-    // 6: <SalesRegistration />,
+    6: <SalesRegistration />,
   };
 
   const handleCategory = id => {

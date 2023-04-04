@@ -7,6 +7,7 @@ import { API } from '../../../../config';
 import { useRecoilValue } from 'recoil';
 import { isLoginedState } from '../../../../recoil';
 import * as S from './ProductInfo.style';
+import swal from 'sweetalert';
 
 const ProductInfo = ({ info }) => {
   const params = useParams();
@@ -86,7 +87,7 @@ const ProductInfo = ({ info }) => {
 
   const controlWishList = id => {
     if (!isLogined) {
-      alert('로그인이 필요합니다.');
+      swal('로그인이 필요합니다.');
       return;
     }
     toggleItemToWishList(id);

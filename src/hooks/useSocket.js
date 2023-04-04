@@ -4,7 +4,13 @@ import useFetch from './useFetch';
 
 const useSocket = (initPrice, productId, price) => {
   const loginToken = localStorage.getItem('login-token');
-  const { loading, data } = useFetch(`${API.BIDS}/items/${productId}`);
+  const { loading, data } = useFetch(`${API.BIDS}/items/${productId}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+      Authorization: localStorage.getItem('login-token'),
+    },
+  });
 
   const [currentPrice, setCurrentPrice] = useState(initPrice);
   const [myBiddingPrice, setMyBiddingPrice] = useState(0);
