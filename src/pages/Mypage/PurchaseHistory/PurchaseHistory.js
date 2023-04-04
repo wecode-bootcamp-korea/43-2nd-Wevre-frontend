@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { API } from '../../../config';
-import useFetch from '../../../hooks/useFetch';
 import { Card, CardMedia } from '@mui/material';
 import * as S from './PurchaseHistory.style';
 
@@ -17,7 +16,6 @@ const PurchaseHistory = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setOrderData(data);
         setLoading(false);
       });
@@ -25,11 +23,12 @@ const PurchaseHistory = () => {
 
   if (loading) return <div>Loading</div>;
 
-  console.log(orderData);
   return (
     <S.PurchaseContainer>
       <S.CategoryTitle>구매내역</S.CategoryTitle>
-      {orderData &&
+      {!orderData.length > 0 ? (
+        <></>
+      ) : (
         orderData.map(items => {
           const {
             orderId,
@@ -115,7 +114,8 @@ const PurchaseHistory = () => {
               </Card>
             </S.CardBox>
           );
-        })}
+        })
+      )}
     </S.PurchaseContainer>
   );
 };
