@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardMedia } from '@mui/material';
-import * as S from './WishList.style';
 import { useNavigate } from 'react-router-dom';
+import * as S from './WishList.style';
 
 const WishList = props => {
   const { item_id, image_url, item_name } = props.data;
