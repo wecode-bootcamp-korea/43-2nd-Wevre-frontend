@@ -37,6 +37,11 @@ const mixins = {
     justify-content: ${justify};
   `,
 
+  flexDirection: (direction = 'coloumn') => `
+    display: flex;
+    flex-direction: ${direction};
+  `,
+
   transform: (top = '50%', left = '50%') => `
     position: absolute;
     top: ${top};
