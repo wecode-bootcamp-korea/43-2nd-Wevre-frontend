@@ -6,6 +6,7 @@ import { useSetRecoilState } from 'recoil';
 import { isLoginedState } from '../../../recoil';
 import { API } from '../../../config';
 import * as S from './Redirect.style';
+import swal from 'sweetalert';
 
 const Redirect = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Redirect = () => {
         setIsLogined(true);
         navigate(beforeAddress);
       } else {
-        alert('로그인에 실패했습니다. 다시 시도해주시기 바랍니다.');
+        swal('로그인에 실패했습니다. 다시 시도해주시기 바랍니다.');
       }
     }
   }, [loading]);

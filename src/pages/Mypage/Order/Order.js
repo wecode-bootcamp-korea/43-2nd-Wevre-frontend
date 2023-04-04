@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDaumPost from 'react-daumpost-hook';
+
 import { API } from '../../../config';
 import {
   Card,
@@ -13,6 +14,7 @@ import {
 import PropTypes from 'prop-types';
 import { IMaskInput } from 'react-imask';
 import * as S from './Order.style';
+import { useNavigate, useParams } from 'react-router';
 
 //MUI INPUT 전화번호 자동 하이픈 입력 함수
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
@@ -36,6 +38,7 @@ TextMaskCustom.propTypes = {
 };
 
 const Order = () => {
+  const navigate = useNavigate();
   const [orderData, setOrderData] = useState({});
   const [loading, setLoding] = useState(true);
   const [addressData, setAddressData] = useState({
@@ -47,7 +50,10 @@ const Order = () => {
     price: Number.MAX_SAFE_INTEGER,
   });
   const { street, address, zipcode, phoneNumber } = addressData;
+  const params = useParams();
+
   const {
+    itemId,
     imageUrl,
     userName,
     userEmail,
@@ -93,7 +99,7 @@ const Order = () => {
   const postCode = ReactDaumPost(postConfig);
 
   const appendOrderData = () =>
-    fetch(API.ORDERS, {
+    fetch(`${API.ORDERS}/${params.id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -126,10 +132,11 @@ const Order = () => {
     })
       .then(res => res.json())
       .then(data => {
-        window.location.href = data.data;
+        window.open(data.data);
       });
+    navigate('/mypage');
   };
-
+  console.log(addressData);
   if (loading) return <div>Loading</div>;
 
   return (

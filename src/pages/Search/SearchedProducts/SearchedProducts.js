@@ -3,6 +3,7 @@ import { Card, CardMedia } from '@mui/material';
 import Soldout from '../../../assets/images/soldout.png';
 import * as S from './SearchedProducts.style';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const SearchedProducts = ({ productData }) => {
   const navigate = useNavigate();
@@ -22,11 +23,11 @@ const SearchedProducts = ({ productData }) => {
 
   const moveToDetail = () => {
     if (!localStorage.getItem('login-token')) {
-      alert('로그인이 필요한 페이지입니다.');
+      swal('로그인이 필요한 페이지입니다.');
       return;
     }
     if (bidStatus === '낙찰완료') {
-      alert('이미 낙찰된 상품입니다.');
+      swal('이미 낙찰된 상품입니다.');
       return;
     } else {
       navigate(`/detail/${id}`);

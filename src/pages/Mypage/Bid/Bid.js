@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { API } from '../../../config';
 import { Card, CardMedia, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import * as S from './Bid.style';
 
 const Bid = () => {
   const [list, setList] = useState([]);
+  const [itemId, setItemId] = useState({});
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const items = itemId;
 
   useEffect(() => {
     fetch(API.BIDS, {
@@ -17,13 +22,17 @@ const Bid = () => {
     })
       .then(res => res.json())
       .then(data => {
+        console.log(data);
         setList(data.bids);
+        setItemId(data.bids[0].itemId);
         setLoading(false);
       });
   }, []);
 
   if (loading) return <div>Loading</div>;
-
+  const goToOrder = () => {
+    navigate(`/orders/${items}`);
+  };
   return (
     <S.CategoryContainer>
       <S.Title>입찰 내역</S.Title>
@@ -43,7 +52,7 @@ const Bid = () => {
           const masterpiece = [
             { id: 1, name: '작품명', 작품명: itemName },
             { id: 2, name: '작가명', 작가명: authorName },
-            { id: 3, name: '현재가', 현재가: currentPrice },
+            { id: 3, name: '현재가', 현재가: myLastBidPrice },
             { id: 4, name: '시작가', 시작가: startingBid },
             { id: 5, name: '경매마감', 경매마감: biddingEnd },
           ];
@@ -76,29 +85,17 @@ const Bid = () => {
                 })}
               </S.CardBox>
               {bidStatus === '낙찰완료' ? (
-                currentPrice === myLastBidPrice ? (
-                  <Button
-                    variant="contained"
-                    sx={{
-                      backgroundColor: '#F7E600',
-                      '&:hover': { backgroundColor: '#3A1D1D' },
-                      fontSize: 16,
-                    }}
-                  >
-                    주문 하기
-                  </Button>
-                ) : (
-                  <Button
-                    variant="contained"
-                    disabled
-                    sx={{
-                      backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                      fontSize: 16,
-                    }}
-                  >
-                    낙찰 완료
-                  </Button>
-                )
+                <Button
+                  onClick={goToOrder}
+                  variant="contained"
+                  sx={{
+                    backgroundColor: '#cdb8f1',
+                    '&:hover': { backgroundColor: '#babbf6' },
+                    fontSize: 16,
+                  }}
+                >
+                  주문 하기
+                </Button>
               ) : (
                 <Button
                   variant="contained"

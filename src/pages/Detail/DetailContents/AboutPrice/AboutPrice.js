@@ -7,6 +7,7 @@ import { isLoginedState, setModal } from '../../../../recoil';
 import useSocket from '../../../../hooks/useSocket';
 import { Button } from '@mui/joy';
 import * as S from './AboutPrice.style';
+import swal from 'sweetalert';
 
 const AboutPrice = ({ info, productId }) => {
   const isLogined = useRecoilValue(isLoginedState);
@@ -23,7 +24,7 @@ const AboutPrice = ({ info, productId }) => {
   const openModal = () => {
     if (isLogined) {
       if (biddingPrice === myBiddingPrice) {
-        alert(
+        swal(
           '고객님께서 입찰하신 가격이 현재 상한가입니다. 추가 입금을 할 수 없습니다.'
         );
         return;
@@ -35,7 +36,7 @@ const AboutPrice = ({ info, productId }) => {
         data: { info, currentPrice, setBiddingPrice },
       });
     } else {
-      alert('로그인이 필요한 페이지입니다.');
+      swal('로그인이 필요한 페이지입니다.');
       setModalOpen({
         ...modalOpen,
         isOpenModal: true,

@@ -31,7 +31,7 @@ const MyChart = ({ chartData }) => {
       {
         type: 'line',
         label: '입찰금액 변동률(%)',
-        data: chartData.map(data => data.price_change_rate),
+        data: chartData.map(data => data.price_change_rate * 50),
         backgroundColor: 'rgb(161,14,37)',
         borderColor: 'rgb(161,14,37)',
         borderWidth: 1,
