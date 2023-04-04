@@ -83,6 +83,7 @@ const SellerQualification = () => {
           width: 150,
           fontSize: 15,
           marginTop: '100px',
+          marginBottom: '100px',
         }}
         variant="contained"
         onClick={handleSellerSubmit}
