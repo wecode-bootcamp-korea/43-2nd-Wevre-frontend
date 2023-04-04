@@ -20,9 +20,6 @@ const PurchaseHistory = () => {
         setLoading(false);
       });
   }, []);
-
-  if (loading) return <div>Loading</div>;
-
   return (
     <S.PurchaseContainer>
       <S.CategoryTitle>구매내역</S.CategoryTitle>
