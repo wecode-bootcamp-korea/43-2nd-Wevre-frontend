@@ -8,6 +8,10 @@ const BuyerQualification = () => {
   const handleAgreeButton = () => {
     fetch(API.BUYER, {
       method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('login-token'),
+      },
     })
       .then(res => res.json())
       .then(data => console.log(data));
