@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BASE_URL from '../../config';
 import UserInfo from './UserInfo/UserInfo';
 import Bid from './Bid/Bid';
 import BuyerQual from './BuyerQualification/BuyerQualification';
@@ -7,6 +6,7 @@ import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
 import SalesHistory from './SalesHistory/SalesHistory';
 import Wishlist from './Wishlist/Wishlist';
+import SalesRegistration from './SalesRegistration/SalesRegistration';
 import { SUB_TITLE } from './SUB_TITLE';
 import { List, ListItemButton, ListItemText } from '@mui/material';
 import * as S from './Mypage.style';
@@ -15,13 +15,14 @@ const Mypage = () => {
   const [id, setId] = useState(0);
 
   const ContentsComponents = {
-    0: <UserInfo id={id} />,
-    1: <BuyerQual id={id} />,
-    2: <SellerQual id={id} />,
-    3: <Bid id={id} />,
-    4: <Purchase id={id} />,
-    5: <SalesHistory id={id} />,
-    6: <Wishlist id={id} />,
+    0: <UserInfo />,
+    1: <BuyerQual />,
+    2: <SellerQual />,
+    3: <Bid />,
+    4: <Purchase />,
+    5: <SalesHistory />,
+    6: <SalesRegistration />,
+    7: <Wishlist />,
   };
 
   const handleCategory = id => {

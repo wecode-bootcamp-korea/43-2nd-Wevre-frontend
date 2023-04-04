@@ -28,6 +28,10 @@ export const SUB_TITLE = {
     },
     {
       id: 6,
+      value: '판매 등록',
+    },
+    {
+      id: 7,
       value: '위시리스트',
     },
   ],
