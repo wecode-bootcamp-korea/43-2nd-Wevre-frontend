@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import * as S from './SellerQualification.style';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const SellerQualification = () => {
   const navigate = useNavigate();
@@ -37,14 +38,8 @@ const SellerQualification = () => {
       body: JSON.stringify(inputValue),
     })
       .then(res => res.json())
-      .then(data => {
-        if (data.message === 'SUCCESSFULLY_REGISTERED') {
-          <Alert severity="success">전송이 완료되었습니다.</Alert>;
-          navigate('/mypage');
-        } else {
-          <Alert severity="error">전송 실패</Alert>;
-        }
-      });
+      .then(data => {});
+    swal('등록이 완료되었습니다.');
   };
 
   return (

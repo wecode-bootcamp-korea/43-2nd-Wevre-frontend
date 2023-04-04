@@ -1,8 +1,9 @@
 import React from 'react';
 import { API } from '../../../config';
-import { Card, Alert } from '@mui/material';
+import { Card } from '@mui/material';
 import { Button, Box } from '@mui/joy';
 import { QUAL_INFO } from './QUAL_INFO';
+import swal from 'sweetalert';
 import * as S from './BuyerQualification.style';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,15 +18,8 @@ const BuyerQualification = () => {
       },
     })
       .then(res => res.json())
-      .then(data => {
-        if (data.message === 'SUCCESSFULLY_REGISTERED') {
-          console.log(data);
-          <Alert severity="success">등록이 완료되었습니다.</Alert>;
-          navigate('/mypage');
-        } else {
-          <Alert severity="error">등록 실패</Alert>;
-        }
-      });
+      .then(data => console.log(data));
+    swal('등록이 완료되었습니다.');
   };
 
   return (

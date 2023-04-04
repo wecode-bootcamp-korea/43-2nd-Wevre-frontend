@@ -2,13 +2,11 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { API } from '../../../config';
 import { Avatar, Card, CardMedia } from '@mui/material';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { Button } from '@mui/joy';
 import useFetch from '../../../hooks/useFetch';
 import * as S from './UserInfo.style';
 
 const UserInfo = () => {
-  const { loading, data } = useFetch('/data/mypageWishlist.json');
-  const piece = data;
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
@@ -80,7 +78,7 @@ const UserInfo = () => {
           </S.UserQaulDetail>
         </S.UserInfoBox>
       </Card>
-      <Card
+      {/* <Card
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -107,7 +105,7 @@ const UserInfo = () => {
               ))}
           </S.WishlistContainer>
         </S.Wishlist>
-      </Card>
+      </Card> */}
     </S.CategoryContainer>
   );
 };
