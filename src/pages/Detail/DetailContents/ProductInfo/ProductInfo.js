@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import useFetch from '../../../../hooks/useFetch';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import * as S from './ProductInfo.style';
 import { useNavigate, useParams } from 'react-router-dom';
 import { API } from '../../../../config';
+import { useRecoilValue } from 'recoil';
+import { isLoginedState } from '../../../../recoil';
+import * as S from './ProductInfo.style';
 
 const ProductInfo = ({ info }) => {
   const params = useParams();
   const navigate = useNavigate();
   const [isUpdateWishListFlag, setIsUpdateWishListFlag] = useState(false);
+  const [wishListData, setWishListData] = useState([]);
+  const isLogined = useRecoilValue(isLoginedState);
 
   const {
     author_name,
@@ -31,28 +34,44 @@ const ProductInfo = ({ info }) => {
     }
   });
 
-  //FIXME - mock data devUrl
-  //const getAllWishList = '/data/wishlistOne.json';
-
-  const getAllWishList = `${API.WISHLIST}`;
-
-  const { loading, data } = useFetch(getAllWishList);
+  useEffect(() => {
+    fetch(API.WISHLIST, getParams)
+      .then(res => res.json())
+      .then(data => setWishListData(data.data));
+  }, []);
 
   useEffect(() => {
-    if (!loading) {
-      data.data.map(data => {
+    if (wishListData.length > 0) {
+      wishListData.map(data => {
         if (data.item_id === Number(params.id)) {
           setIsUpdateWishListFlag(true);
         }
       });
     }
-  }, [loading]);
+  }, [wishListData]);
+
+  //FIXME - mock data devUrl
+  //const getAllWishList = '/data/wishlistOne.json';
+
+  const getAllWishList = `${API.WISHLIST}`;
+
+  const loginToken = localStorage.getItem('login-token');
+  const getParams = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: loginToken,
+    },
+  };
 
   const toggleItemToWishList = id => {
     const toggleUrl = `${getAllWishList}/items/${id}`;
     const params = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: loginToken,
+      },
     };
 
     fetch(toggleUrl, params).then(res => {
@@ -65,6 +84,10 @@ const ProductInfo = ({ info }) => {
   };
 
   const controlWishList = id => {
+    if (!isLogined) {
+      alert('로그인이 필요합니다.');
+      return;
+    }
     toggleItemToWishList(id);
   };
 
