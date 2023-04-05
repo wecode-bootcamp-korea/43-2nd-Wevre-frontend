@@ -4,6 +4,7 @@ export const RcContainer = styled.div`
   position: fixed;
   top: 22%;
   right: 3%;
+  z-index: 2;
 `;
 
 export const RcBox = styled.div`

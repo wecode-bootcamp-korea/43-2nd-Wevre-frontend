@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Soldout from '../../../../assets/images/soldout.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './Product.style';
@@ -7,7 +8,12 @@ import * as S from './Product.style';
 const Product = ({ item }) => {
   const navigate = useNavigate();
   const moveToDetail = id => {
-    navigate(`/detail/${id}`);
+    if (item.bidStatus === '낙찰완료') {
+      alert('이미 낙찰된 상품입니다.');
+      return;
+    } else {
+      navigate(`/detail/${id}`);
+    }
   };
 
   useEffect(() => {
@@ -16,6 +22,9 @@ const Product = ({ item }) => {
 
   return (
     <S.PrdWrapper data-aos="fade-right">
+      {item.bidStatus === '낙찰완료' && (
+        <S.Soldout src={Soldout} alt="soldout" />
+      )}
       <S.PrdImg src={`${item.imageUrl}`} alt="ProductImage" />
       <S.PrdContents>
         <S.Title>작품명 : {item.itemName}</S.Title>
