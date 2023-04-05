@@ -1,14 +1,22 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const PrdWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   height: 60vh;
   margin: 15vh 0;
   background-color: ${({ theme }) => theme.colors.silver};
+`;
+
+export const Soldout = styled.img`
+  position: absolute;
+  left: 10%;
+  width: 40%;
+  height: 45%;
+  opacity: 0.8;
 `;
 
 export const PrdImg = styled.img`
