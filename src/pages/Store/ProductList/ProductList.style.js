@@ -7,8 +7,7 @@ export const GuideText = styled.p`
 `;
 
 export const ResultSort = styled.div`
-  position: absolute;
+  display: flex;
+  justify-content: right;
   font-size: ${({ theme }) => theme.sizes.medium};
-  right: 19%;
-  top: 35%;
 `;

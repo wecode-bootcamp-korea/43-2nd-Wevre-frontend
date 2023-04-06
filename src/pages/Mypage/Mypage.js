@@ -5,9 +5,10 @@ import BuyerQual from './BuyerQualification/BuyerQualification';
 import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
 import SalesHistory from './SalesHistory/SalesHistory';
-// import SalesRegistration from './SalesRegistration/SalesRegistration';
+import SalesRegistration from './SalesRegistration/SalesRegistration';
 import { SUB_TITLE } from './SUB_TITLE';
-import { List, ListItemButton, ListItemText } from '@mui/material';
+import { List } from '@mui/material';
+import { Button } from '@mui/joy';
 import * as S from './Mypage.style';
 
 const Mypage = () => {
@@ -20,7 +21,7 @@ const Mypage = () => {
     3: <Bid />,
     4: <Purchase />,
     5: <SalesHistory />,
-    // 6: <SalesRegistration />,
+    6: <SalesRegistration />,
   };
 
   const handleCategory = id => {
@@ -35,17 +36,16 @@ const Mypage = () => {
           <>
             <S.CategorySubTitle>{title}</S.CategorySubTitle>
             {list.map(({ value, id }) => (
-              <List sx={{ height: '4vh' }} key={id}>
-                <ListItemButton onClick={() => handleCategory(id)}>
-                  <ListItemText
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'left',
-                    }}
-                  >
-                    <S.ListText>{value}</S.ListText>
-                  </ListItemText>
-                </ListItemButton>
+              <List key={id}>
+                <Button
+                  sx={{ width: 200, height: 50 }}
+                  size="lg"
+                  onClick={() => handleCategory(id)}
+                  variant="plain"
+                  color="neutral"
+                >
+                  {value}
+                </Button>
               </List>
             ))}
           </>

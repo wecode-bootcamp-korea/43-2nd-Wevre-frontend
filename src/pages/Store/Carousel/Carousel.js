@@ -11,7 +11,7 @@ const Carousel = () => {
   SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <S.Carousel>
-      <Card sx={{ width: '100%', height: '100vh' }}>
+      <Card sx={{ width: '100%', height: '600px' }}>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}

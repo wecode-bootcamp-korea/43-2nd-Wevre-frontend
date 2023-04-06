@@ -4,7 +4,7 @@ export const Carousel = styled.div`
   display: flex;
   margin: 0 auto;
   position: relative;
-  width: 60%;
+  width: 80%;
   height: 600px;
   overflow: hidden;
   object-fit: cover;
@@ -12,7 +12,7 @@ export const Carousel = styled.div`
 
 export const CarouselImg = styled.img`
   width: 100%;
-  height: 90%;
+  height: 600px;
 `;
 
 export const CarouselContents = styled.span`

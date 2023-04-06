@@ -12,7 +12,8 @@ export const Title = styled.h1`
 export const BuyerTextBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
+  margin-left: 100px;
 `;
 
 export const BuyerTitle = styled.p`

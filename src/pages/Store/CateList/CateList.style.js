@@ -5,6 +5,7 @@ export const ResponsiveHeader = styled.nav`
 `;
 
 export const GuideText = styled.p`
+  margin-top: 50px;
   padding: 30px 20px;
   font-family: ${({ theme }) => theme.fontStyle.logo};
   font-size: ${({ theme }) => theme.sizes.large};

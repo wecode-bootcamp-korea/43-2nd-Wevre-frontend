@@ -11,28 +11,23 @@ export const PrdWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.silver};
 `;
 
-export const Soldout = styled.img`
-  position: absolute;
-  left: 10%;
-  width: 40%;
-  height: 45%;
-  opacity: 0.8;
-`;
-
 export const PrdImg = styled.img`
   height: 100%;
+  width: 100%;
 `;
 
 export const PrdContents = styled.div`
-  line-height: 36px;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 50%;
+  line-height: 30px;
 `;
 
 export const Title = styled.h2`
   text-align: center;
   font-size: ${({ theme }) => theme.sizes.large};
   font-weight: 600;
-  margin: 40px 0;
 `;
 
 export const Info = styled.p`
@@ -42,7 +37,7 @@ export const Info = styled.p`
 
 export const DetailBtnWrapper = styled.div`
   display: flex;
-  margin: 40px 0;
+
   justify-content: center;
 `;
 
