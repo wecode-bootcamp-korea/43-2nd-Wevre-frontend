@@ -110,22 +110,17 @@ const Order = () => {
   }, []);
 
   const handleOrderSubmit = () => {
-    fetch(API.ORDERS, {
+    fetch(API.KAKAOPAY, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
+        Authorization: localStorage.getItem('login-token'),
       },
       body: JSON.stringify(addressData),
     })
       .then(res => res.json())
       .then(data => {
-        fetch(API.KAKAOPAY, {
-          method: 'POST',
-        })
-          .then(res => res.json())
-          .then(data => {
-            window.location.href = data.data;
-          });
+        window.location.href = data.data;
       });
   };
 
