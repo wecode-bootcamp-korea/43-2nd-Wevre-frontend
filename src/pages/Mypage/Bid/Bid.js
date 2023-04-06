@@ -8,7 +8,13 @@ const Bid = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(API.BIDS)
+    fetch(API.BIDS, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('login-token'),
+      },
+    })
       .then(res => res.json())
       .then(data => {
         setList(data.bids);
@@ -22,7 +28,7 @@ const Bid = () => {
     <S.CategoryContainer>
       <S.Title>입찰 내역</S.Title>
       <S.BidList>
-        {list.map(items => {
+        {list?.map(items => {
           const {
             itemId,
             itemName,
