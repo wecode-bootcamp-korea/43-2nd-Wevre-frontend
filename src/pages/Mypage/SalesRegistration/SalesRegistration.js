@@ -126,7 +126,9 @@ const SalesRegistration = () => {
     Object.keys(formdata).map(data =>
       sendFormData.append(data, formdata[data])
     );
-
+    for (let a of sendFormData.values()) {
+      console.log(a);
+    }
     axios
       .post(API.ITEMS, sendFormData, {
         method: 'POST',

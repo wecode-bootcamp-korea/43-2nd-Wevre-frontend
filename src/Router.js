@@ -23,7 +23,8 @@ const Router = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/store" element={<Store />} />
         <Route path="/store/:cateCode" element={<Store />} />
-        <Route path="/order" element={<Order />} />
+        <Route path="/orders/:id" element={<Order />} />
+        <Route path="/orders" element={<Order />} />
       </Routes>
       <Footer />
     </BrowserRouter>

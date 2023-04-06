@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import UserInfo from './UserInfo/UserInfo';
 import Bid from './Bid/Bid';
 import BuyerQual from './BuyerQualification/BuyerQualification';
-import Purchase from './PurchaseHistory/PurchaseHistory';
+// import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
-import SalesHistory from './SalesHistory/SalesHistory';
-// import SalesRegistration from './SalesRegistration/SalesRegistration';
+// import SalesHistory from './SalesHistory/SalesHistory';
+import SalesRegistration from './SalesRegistration/SalesRegistration';
 import { SUB_TITLE } from './SUB_TITLE';
 import { List } from '@mui/material';
 import { Button } from '@mui/joy';
@@ -19,9 +19,9 @@ const Mypage = () => {
     1: <BuyerQual />,
     2: <SellerQual />,
     3: <Bid />,
-    4: <Purchase />,
-    5: <SalesHistory />,
-    // 6: <SalesRegistration />,
+    // 4: <Purchase />,
+    // 5: <SalesHistory />,
+    6: <SalesRegistration />,
   };
 
   const handleCategory = id => {
