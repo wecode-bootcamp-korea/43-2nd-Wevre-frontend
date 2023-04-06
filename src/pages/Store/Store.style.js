@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StoreContainer = styled.div`
-  padding-top: 75px;
+  padding-top: 150px;
 `;
 
 export const StoreMain = styled.div`

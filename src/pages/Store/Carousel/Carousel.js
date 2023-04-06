@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'; // basic
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css'; //basic
@@ -10,22 +11,24 @@ const Carousel = () => {
   SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <S.Carousel>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        scrollbar={{ draggable: true }}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay
-        loop
-      >
-        {SLIDER_DATA.map(slider => (
-          <SwiperSlide key={slider.id}>
-            <S.CarouselImg src={`${slider.img}`} alt="slideImg" />
-            <S.CarouselContents>{slider.site}</S.CarouselContents>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Card sx={{ width: '100%', height: '100vh' }}>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          scrollbar={{ draggable: true }}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay
+          loop
+        >
+          {SLIDER_DATA.map(slider => (
+            <SwiperSlide key={slider.id}>
+              <S.CarouselImg src={`${slider.img}`} alt="slideImg" />
+              <S.CarouselContents>{slider.site}</S.CarouselContents>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Card>
     </S.Carousel>
   );
 };
@@ -36,7 +39,7 @@ const SLIDER_DATA = [
   {
     id: 1,
     site: '한국미술협회',
-    img: 'https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
+    img: 'https://images.unsplash.com/photo-1538342014732-212dc8f76863?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3005&q=80',
     link: 'https://kfaa.or.kr/',
     contents:
       '저희 Wevre는 한국미술협회와 제휴중이며 다양한 상품을 거래하고 있습니다.',
