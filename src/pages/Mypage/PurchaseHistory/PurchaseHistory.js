@@ -5,7 +5,13 @@ import { Card, CardMedia } from '@mui/material';
 import * as S from './PurchaseHistory.style';
 
 const PurchaseHistory = () => {
-  const { loading, data } = useFetch(API.PURCHASES);
+  const { loading, data } = useFetch(API.PURCHASES, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+      Authorization: localStorage.getItem('login-token'),
+    },
+  });
   if (loading) return <div>Loading</div>;
   const orderData = data.purchases;
 

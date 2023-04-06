@@ -93,7 +93,13 @@ const Order = () => {
   const postCode = ReactDaumPost(postConfig);
 
   const appendOrderData = () =>
-    fetch(API.ORDERS)
+    fetch(API.ORDERS, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('login-token'),
+      },
+    })
       .then(res => res.json())
       .then(({ orders: [data] }) => {
         setOrderData(data);

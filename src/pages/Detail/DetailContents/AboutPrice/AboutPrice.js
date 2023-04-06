@@ -5,6 +5,7 @@ import ModalPortal from '../../../../components/Modal/Portal/Portal';
 import Modal from '../../../../components/Modal/Modal';
 import { isLoginedState, setModal } from '../../../../recoil';
 import useSocket from '../../../../hooks/useSocket';
+import { Button } from '@mui/joy';
 import * as S from './AboutPrice.style';
 
 const AboutPrice = ({ info, productId }) => {
@@ -46,15 +47,54 @@ const AboutPrice = ({ info, productId }) => {
 
   return (
     <div>
-      <S.PriceArea type="current">
-        <S.PriceTxt>현재가</S.PriceTxt>
-        <S.PriceValue>{currentPrice.toLocaleString()}원</S.PriceValue>
-      </S.PriceArea>
-      <S.PriceArea type="start">
-        <S.PriceTxt>시작가</S.PriceTxt>
-        <S.PriceValue>{Number(starting_bid).toLocaleString()}원</S.PriceValue>
-      </S.PriceArea>
-      <S.DoBidding onClick={openModal}>입 찰</S.DoBidding>
+      <S.Button>
+        {' '}
+        <Button
+          sx={{
+            marginTop: 5,
+            width: '70%',
+            height: 50,
+            display: 'flex',
+            justifyContent: 'space-between',
+            opacity: 0.8,
+          }}
+          disabled
+          color="primary"
+        >
+          <S.PriceTxt>현재가</S.PriceTxt>
+          <S.PriceValue>{currentPrice.toLocaleString()}원</S.PriceValue>
+        </Button>
+        <Button
+          sx={{
+            marginTop: 1,
+            width: '70%',
+            height: 50,
+            display: 'flex',
+            justifyContent: 'space-between',
+            opacity: 0.8,
+          }}
+          disabled
+        >
+          {' '}
+          <S.PriceTxt>시작가</S.PriceTxt>
+          <S.PriceValue>{Number(starting_bid).toLocaleString()}원</S.PriceValue>
+        </Button>
+        <Button
+          sx={{
+            marginTop: 5,
+            width: '70%',
+            height: 50,
+            display: 'flex',
+            justifyContent: 'center',
+            fontSize: 20,
+            opacity: 0.9,
+          }}
+          onClick={openModal}
+        >
+          입 찰
+        </Button>
+      </S.Button>
+
       <S.ChartArea />
       {chartData && <MyChart chartData={chartData} />}
       <ModalPortal>

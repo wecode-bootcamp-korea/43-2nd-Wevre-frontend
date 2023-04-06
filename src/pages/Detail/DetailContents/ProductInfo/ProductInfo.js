@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { Button } from '@mui/joy';
 import { useNavigate, useParams } from 'react-router-dom';
 import { API } from '../../../../config';
 import { useRecoilValue } from 'recoil';
@@ -102,11 +103,25 @@ const ProductInfo = ({ info }) => {
       <S.Contents>무게 : {weight} kg</S.Contents>
       <S.Contents>제작년도 : {production_year} 년</S.Contents>
       <S.Contents>소재 : {artMaterials}</S.Contents>
-
-      <S.WishListArea onClick={() => controlWishList(params.id)}>
-        위시리스트
-        {isUpdateWishListFlag ? <BookmarkIcon /> : <BookmarkBorderIcon />}
-      </S.WishListArea>
+      <S.Button>
+        <Button
+          variant="plain"
+          sx={{
+            marginTop: 10,
+            width: '70%',
+            height: 50,
+            backgroundColor: 'rgb(138,138,139)',
+            color: '#fafafa',
+            ':hover': {
+              backgroundColor: 'rgb(68,68,69)',
+            },
+          }}
+          onClick={() => controlWishList(params.id)}
+        >
+          위시리스트
+          {isUpdateWishListFlag ? <BookmarkIcon /> : <BookmarkBorderIcon />}
+        </Button>
+      </S.Button>
     </div>
   );
 };

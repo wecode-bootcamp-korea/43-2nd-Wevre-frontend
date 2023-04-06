@@ -1,11 +1,13 @@
 import React from 'react';
 import { API } from '../../../config';
-import { Card } from '@mui/material';
+import { Card, Alert } from '@mui/material';
 import { Button, Box } from '@mui/joy';
 import { QUAL_INFO } from './QUAL_INFO';
 import * as S from './BuyerQualification.style';
+import { useNavigate } from 'react-router-dom';
 
 const BuyerQualification = () => {
+  const navigate = useNavigate();
   const handleAgreeButton = () => {
     fetch(API.BUYER, {
       method: 'PATCH',
@@ -15,7 +17,15 @@ const BuyerQualification = () => {
       },
     })
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => {
+        if (data.message === 'SUCCESSFULLY_REGISTERED') {
+          console.log(data);
+          <Alert severity="success">등록이 완료되었습니다.</Alert>;
+          navigate('/mypage');
+        } else {
+          <Alert severity="error">등록 실패</Alert>;
+        }
+      });
   };
 
   return (
@@ -42,10 +52,14 @@ const BuyerQualification = () => {
         <Box
           sx={{
             margin: '50px',
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
           }}
         >
           <Button
-            size="lg"
+            sx={{ width: '20%', height: '40px', fontSize: 20 }}
             onClick={() => handleAgreeButton()}
             color="neutral"
             variant="solid"

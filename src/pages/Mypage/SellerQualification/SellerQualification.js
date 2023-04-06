@@ -9,10 +9,13 @@ import {
   MenuItem,
   TextField,
   Card,
+  Alert,
 } from '@mui/material';
 import * as S from './SellerQualification.style';
+import { useNavigate } from 'react-router-dom';
 
 const SellerQualification = () => {
+  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     bankName: '',
     bankAccount: '',
@@ -36,7 +39,10 @@ const SellerQualification = () => {
       .then(res => res.json())
       .then(data => {
         if (data.message === 'SUCCESSFULLY_REGISTERED') {
-          alert('전송이 완료되었습니다.');
+          <Alert severity="success">전송이 완료되었습니다.</Alert>;
+          navigate('/mypage');
+        } else {
+          <Alert severity="error">전송 실패</Alert>;
         }
       });
   };
@@ -89,11 +95,15 @@ const SellerQualification = () => {
         />
         <Box
           sx={{
-            marginBottom: '100px',
+            margin: '50px',
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
           }}
         >
           <Button
-            size="lg"
+            sx={{ width: '20%', height: '40px', fontSize: 20 }}
             onClick={handleSellerSubmit}
             color="neutral"
             variant="solid"
