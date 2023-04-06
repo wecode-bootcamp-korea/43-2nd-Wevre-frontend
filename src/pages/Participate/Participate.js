@@ -25,7 +25,8 @@ const Participate = ({ data }) => {
     if (integerPrice) {
       isSetCheckedOk(true);
       setPrice(integerPrice.toLocaleString());
-      if (integerPrice > currentPrice) setIsBidActivation(true);
+      if (integerPrice > (currentPrice && getIntegerPrice(starting_bid)))
+        setIsBidActivation(true);
       else setIsBidActivation(false);
     } else {
       isSetCheckedOk(false);
