@@ -37,11 +37,6 @@ export const ResultTitleBox = styled.div`
 export const ResultTitle = styled.h1`
   font-size: ${({ theme }) => theme.sizes.xLarge};
 `;
-
-export const ResultSort = styled.div`
-  font-size: ${({ theme }) => theme.sizes.medium};
-`;
-
 export const ResultListBox = styled.div`
   padding: 80px 0;
   display: grid;
