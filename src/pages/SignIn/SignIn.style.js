@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const UserContainer = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Title = styled.div`
@@ -10,6 +12,7 @@ export const Title = styled.div`
   font-size: ${({ theme }) => theme.sizes.xLarge};
   color: ${({ theme }) => theme.colors.navy};
   text-align: center;
+  justify-content: center;
   padding-top: 30px;
   padding-bottom: 35px;
 `;
@@ -21,7 +24,7 @@ export const SignBtnArea = styled.div`
     position: absolute;
     top: 0;
     left: 50%;
-    width: 50px;
+    width: 100px;
     height: 1px;
     transform: translateX(-50%);
     background-color: #dedede;
@@ -32,7 +35,7 @@ export const SignBtnArea = styled.div`
 export const Button = styled.button`
   position: relative;
   width: 100%;
-  margin: 55px 0 55px 0;
+  margin: 70px 0 50px 0;
   padding: 18px 0;
   border: none;
   border-radius: 20px;

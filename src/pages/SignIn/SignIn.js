@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { KAKAO_AUTH_URL } from './OAuth/OAuth';
+import { Button } from '@mui/joy';
 import * as S from './SignIn.style';
 
 const User = () => {
   const location = useLocation();
-
+  console.log(KAKAO_AUTH_URL);
   const handleHref = () => {
     localStorage.setItem(
       'before-address',
@@ -16,7 +17,24 @@ const User = () => {
   };
   return (
     <S.UserContainer key={LOGIN_FORM_INFO.id}>
-      <S.Title>{LOGIN_FORM_INFO.text}</S.Title>
+      <Button
+        sx={{
+          width: 150,
+          fontSize: 20,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '30px',
+          marginLeft: '135px',
+          fontSize: 35,
+        }}
+        color="black"
+        size="lg"
+        disabled
+        variant="plain"
+      >
+        LOGIN
+      </Button>
       <S.SignBtnArea>
         <S.Button variant="contained" onClick={handleHref}>
           <S.KakaoLogo src={LOGIN_FORM_INFO.logo} />

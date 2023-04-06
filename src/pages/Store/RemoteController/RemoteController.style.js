@@ -13,7 +13,7 @@ export const RcBox = styled.div`
   border-radius: 20px;
   padding: 10px;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.silver};
+  background-color: white;
   overflow: scroll;
 `;
 

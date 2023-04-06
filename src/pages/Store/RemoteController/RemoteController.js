@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import WishList from './WishList/WishList';
+import { Button } from '@mui/joy';
 import { API } from '../../../config';
 import * as S from './RemoteController.style';
 
@@ -27,7 +28,15 @@ const RemoteController = () => {
   return (
     <S.RcContainer>
       <S.RcBox>
-        <S.Title>WishList 🧞‍♂️</S.Title>
+        <Button
+          sx={{ width: 150, fontSize: 20 }}
+          color="black"
+          size="lg"
+          disabled
+          variant="plain"
+        >
+          Wishlist
+        </Button>
         <S.Count>
           총 {wishListData.data ? wishListData.data.length : 0}개
         </S.Count>
