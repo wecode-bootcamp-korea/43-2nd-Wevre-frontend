@@ -4,9 +4,7 @@ import styled from 'styled-components';
 export const CategoryContainer = styled.div`
   ${theme.mixins.flexBox('center', 'center')}
   flex-direction: column;
-  padding: 50px;
-  height: 80%;
-  width: 60vw;
+  width: 100%;
 `;
 
 export const UserInfoBox = styled.div`
@@ -18,8 +16,12 @@ export const UserInfoBox = styled.div`
 `;
 
 export const Title = styled.h1`
+  margin: 5vh;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
   font-size: ${({ theme }) => theme.sizes.large};
-  margin-bottom: 2%;
+  margin-bottom: 50px;
 `;
 
 export const UserInfoDetail = styled.div`
@@ -62,23 +64,11 @@ export const Wishlist = styled.div`
   flex-direction: column;
 `;
 
-export const WishlistTitle = styled.h1`
-  ${theme.mixins.flexBox('center', 'center')}
-  font-size: ${({ theme }) => theme.sizes.large};
-  margin-bottom: 2%;
-`;
-
 export const WishlistContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-`;
-
-export const BookMark = styled.div`
-  position: relative;
-  top: 10%;
-  left: 90%;
-  opacity: 0.9;
+  gap: 50px;
+  margin-bottom: 50px;
 `;
 
 export const CardTitle = styled.h2`
