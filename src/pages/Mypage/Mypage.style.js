@@ -11,7 +11,7 @@ export const Section = styled.div`
 export const Category = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0px 80px;
+  margin: 0px 80px 80px;
 `;
 
 export const CategoryTitle = styled.h1`
