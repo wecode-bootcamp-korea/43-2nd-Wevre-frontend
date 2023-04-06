@@ -1,15 +1,12 @@
 import styled from 'styled-components';
-import theme from '../../../styles/theme';
 
 export const BuyerSection = styled.div`
-  ${theme.mixins.flexBox('center', 'center')}
-  flex-direction: column;
   width: 100%;
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 5vh;
-  font-size: 36px;
+  margin: 5vh;
+  font-size: 26px;
 `;
 
 export const BuyerTextBox = styled.div`
