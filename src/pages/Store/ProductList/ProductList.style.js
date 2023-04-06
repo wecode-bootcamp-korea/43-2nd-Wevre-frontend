@@ -5,3 +5,10 @@ export const GuideText = styled.p`
   font-size: ${({ theme }) => theme.sizes.xlarge};
   height: 60vh;
 `;
+
+export const ResultSort = styled.div`
+  position: absolute;
+  font-size: ${({ theme }) => theme.sizes.medium};
+  right: 19%;
+  top: 35%;
+`;

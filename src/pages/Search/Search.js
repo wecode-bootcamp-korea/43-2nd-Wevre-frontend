@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import MUISelectStandard from './MUISelect/MUISelectStandard';
-import MUISelectSort from './MUISelect/MUISelectSort';
+import MUISelectStandard from './MUISelectStandard/MUISelectStandard';
 import { API } from '../../config';
 import SearchedProducts from './SearchedProducts/SearchedProducts';
 import * as S from './Search.style';
 
 const Search = () => {
   const [searchStandardValue, setSearchStandardValue] = useState('itemName');
-  const [searchSortValue, setSearchSortValue] = useState('price');
   const [inputData, setInputData] = useState('');
-
   const [searchData, setSearchData] = useState([]);
 
   //FIXME - devUrl
   //const searchUrl = `/data/searchedData.json`;
 
-  const searchUrl = `${API.ITEMS}?${searchStandardValue}=${inputData}&sorting=${searchSortValue}`;
+  const searchUrl = `${API.ITEMS}?${searchStandardValue}=${inputData}`;
 
   useEffect(() => {
     if (inputData) {
@@ -49,9 +46,6 @@ const Search = () => {
       <S.ResultWrapper>
         <S.ResultTitleBox>
           <S.ResultTitle>검색 결과</S.ResultTitle>
-          <S.ResultSort>
-            <MUISelectSort setSearchSortValue={setSearchSortValue} />
-          </S.ResultSort>
         </S.ResultTitleBox>
 
         <S.ResultListBox>

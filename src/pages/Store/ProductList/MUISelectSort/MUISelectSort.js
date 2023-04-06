@@ -3,10 +3,13 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
+import { useNavigate } from 'react-router-dom';
 
-export default function MUISelectSort({ setSearchSortValue }) {
+export default function MUISelectSort({ setSearchSortValue, categoryId }) {
+  const navigate = useNavigate();
   const handleChange = event => {
     setSearchSortValue(event.target.value);
+    navigate(`/store/${categoryId}?offset=0&limit=1`);
   };
 
   return (

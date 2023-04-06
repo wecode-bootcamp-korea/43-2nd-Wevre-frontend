@@ -4,7 +4,7 @@ export const Carousel = styled.div`
   display: flex;
   margin: 0 auto;
   position: relative;
-  width: 80%;
+  width: 60%;
   height: 600px;
   overflow: hidden;
   object-fit: cover;

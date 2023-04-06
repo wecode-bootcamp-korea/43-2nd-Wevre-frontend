@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import Product from './Product/Product';
 import { API } from '../../../config';
+import MUISelectSort from './MUISelectSort/MUISelectSort';
 import * as S from './ProductList.style';
 
 const ProductList = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [itemList, setItemList] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [searchSortValue, setSearchSortValue] = useState('price');
   const params = useParams();
   const navigate = useNavigate();
   const categoryId = params.cateCode;
@@ -16,7 +18,7 @@ const ProductList = () => {
     ? Number(searchParams.get('offset'))
     : 0;
 
-  const getProductsDataUrl = `${API.ITEMS}?category=${CATE_LIST[categoryId]}`;
+  const getProductsDataUrl = `${API.ITEMS}?category=${CATE_LIST[categoryId]}&sorting=${searchSortValue}`;
 
   const takeAllProducts = () => {
     fetch(getProductsDataUrl)
@@ -40,7 +42,7 @@ const ProductList = () => {
     if (totalCount > 0) {
       takeOneProduct();
     }
-  }, [totalCount, offset, categoryId]);
+  }, [totalCount, offset, categoryId, searchSortValue]);
 
   const infinityScrollListener = () => {
     if (
@@ -68,8 +70,19 @@ const ProductList = () => {
       {!categoryId ? (
         <S.GuideText>카테고리를 선택해주세요.</S.GuideText>
       ) : (
-        itemList.length > 0 &&
-        itemList.map(item => <Product key={`${item.key}`} item={item} />)
+        itemList.length > 0 && (
+          <>
+            <S.ResultSort>
+              <MUISelectSort
+                setSearchSortValue={setSearchSortValue}
+                categoryId={categoryId}
+              />
+            </S.ResultSort>
+            {itemList.map(item => (
+              <Product key={`${item.key}`} item={item} />
+            ))}
+          </>
+        )
       )}
     </article>
   );
