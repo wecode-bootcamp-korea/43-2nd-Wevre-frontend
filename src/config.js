@@ -12,5 +12,5 @@ export const API = {
   ORDERS: `${BASE_URL}/orders`,
   KAKAO: `${BASE_URL}/users/auth/kakao/callback`,
   ITEMS: `${BASE_URL}/items`,
-  KAKAOPAY: `${BASE_URL}/payment/kakao/ready`,
+  KAKAOPAY: `${BASE_URL}/payments/kakao/ready`,
 };
