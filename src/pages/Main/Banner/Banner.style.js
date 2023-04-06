@@ -5,33 +5,35 @@ export const BannerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  margin-top: 240px;
-  background-color: #e8e2e2;
+  height: 400px;
+
+  width: 100%;
   overflow: hidden;
 `;
 
 export const BannerImageWrapper = styled.div`
-  width: 80%;
-  margin: 0 80px;
+  width: 100%;
 `;
 
 export const BannerImage = styled.img`
   width: 100%;
-  height: 80%;
+  height: 100%;
 `;
 
 export const BannerContentsWrapper = styled.div`
-  font-size: 24px;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
   padding: 120px;
-  margin: 120px;
 `;
 
 export const BannerContents = styled.div`
-  width: 60%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
   line-height: 36px;
-  margin-bottom: 40px;
 `;
 
 export const BannerButton = styled.button`
@@ -43,7 +45,6 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
-  margin: 0 20px;
 
   &:hover,
   &:visited,
