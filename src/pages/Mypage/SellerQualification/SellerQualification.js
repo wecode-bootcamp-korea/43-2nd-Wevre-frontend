@@ -28,6 +28,7 @@ const SellerQualification = () => {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
+        Authorization: localStorage.getItem('login-token'),
       },
       body: JSON.stringify(inputValue),
     })
