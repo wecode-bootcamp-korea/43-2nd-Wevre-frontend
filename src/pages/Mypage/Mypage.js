@@ -5,7 +5,6 @@ import BuyerQual from './BuyerQualification/BuyerQualification';
 import Purchase from './PurchaseHistory/PurchaseHistory';
 import SellerQual from './SellerQualification/SellerQualification';
 import SalesHistory from './SalesHistory/SalesHistory';
-import Wishlist from './Wishlist/Wishlist';
 import SalesRegistration from './SalesRegistration/SalesRegistration';
 import { SUB_TITLE } from './SUB_TITLE';
 import { List, ListItemButton, ListItemText } from '@mui/material';
@@ -22,7 +21,6 @@ const Mypage = () => {
     4: <Purchase />,
     5: <SalesHistory />,
     6: <SalesRegistration />,
-    7: <Wishlist />,
   };
 
   const handleCategory = id => {

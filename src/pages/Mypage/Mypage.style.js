@@ -5,6 +5,7 @@ export const Section = styled.div`
   flex-direction: row;
   width: 100vw;
   padding-top: 200px;
+  margin-bottom: 100px;
 `;
 
 export const Category = styled.div`
