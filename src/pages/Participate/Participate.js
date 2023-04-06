@@ -1,8 +1,10 @@
 import React from 'react';
+import { Button, Box } from '@mui/joy';
 import { useResetRecoilState } from 'recoil';
 import { useState } from 'react';
 import { setModal } from '../../recoil';
 import * as S from './Participate.sylte';
+import { Directions } from '@mui/icons-material';
 
 const Participate = ({ data }) => {
   const closeModal = useResetRecoilState(setModal);
@@ -55,8 +57,7 @@ const Participate = ({ data }) => {
   return (
     <div>
       <S.BidHead>
-        <S.BidText>입찰 진행 중 &nbsp;&nbsp;</S.BidText>
-        <S.BidImg src={BID_IMG} alt="bidImage" />
+        <S.BidText>입찰 진행 중</S.BidText>
       </S.BidHead>
       <S.BidWrapper>
         <S.ContentsArea>
@@ -76,32 +77,64 @@ const Participate = ({ data }) => {
           <S.GuideBox isCheckedOk={isCheckedOk}>
             입찰가는 숫자만 입력 가능합니다. 다시 입력해주시기 바랍니다.
           </S.GuideBox>
-          <ul>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '20px',
+            }}
+          >
             {PIRCE_BUTTONS.map(price => (
-              <S.PriceBtn
+              <Button
+                sx={{
+                  margin: '20px',
+                  width: '200px',
+                  backgroundColor: 'rgb(185,190,194)',
+                  ':hover': {
+                    backgroundColor: 'rgb(68,68,69)',
+                  },
+                }}
                 key={price.id}
                 isCheckedOk={isCheckedOk}
                 onClick={() => addPrice(price.value)}
               >
                 {price.text}
-              </S.PriceBtn>
+              </Button>
             ))}
-          </ul>
+          </Box>
           <S.PriceWrapper>
             <S.CurrentPrice>
-              현재가 : {currentPrice.toLocaleString()}원
+              현재가 : ₩{currentPrice.toLocaleString()}원
             </S.CurrentPrice>
             <S.StartPrice>
-              시작가 : ${Number(starting_bid).toLocaleString()}원
+              시작가 : ₩{Number(starting_bid).toLocaleString()}원
             </S.StartPrice>
           </S.PriceWrapper>
-          {isBidActivation ? (
-            <S.BidBtnActive onClick={setBidprice}>
-              입&nbsp;&nbsp;&nbsp;&nbsp;찰
-            </S.BidBtnActive>
-          ) : (
-            <S.BidBtnDisabled>입&nbsp;&nbsp;&nbsp;&nbsp;찰</S.BidBtnDisabled>
-          )}
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            {isBidActivation ? (
+              <Button
+                sx={{
+                  width: '200px',
+                }}
+                onClick={setBidprice}
+              >
+                입&nbsp;&nbsp;&nbsp;&nbsp;찰
+              </Button>
+            ) : (
+              <Button
+                sx={{
+                  width: '200px',
+                  backgroundColor: 'rgb(185,190,194)',
+                  ':hover': {
+                    backgroundColor: 'rgb(68,68,69)',
+                  },
+                }}
+                disabled
+              >
+                입&nbsp;&nbsp;&nbsp;&nbsp;찰
+              </Button>
+            )}
+          </Box>
         </S.ContentsArea>
       </S.BidWrapper>
     </div>

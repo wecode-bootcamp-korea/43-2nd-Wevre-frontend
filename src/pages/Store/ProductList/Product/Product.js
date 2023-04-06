@@ -61,15 +61,15 @@ const Product = ({ item }) => {
           {item.bidStatus === '낙찰완료' ? (
             <Button
               sx={{
-                marginTop: '10%',
+                marginTop: '5%',
                 marginLeft: '50%',
                 width: 200,
                 height: 60,
                 fontSize: 20,
               }}
-              color="danger"
+              color="neutral"
               disabled
-              variant="soft"
+              variant="solid"
               onClick={() => moveToDetail(item.id)}
             >
               낙찰완료
@@ -77,13 +77,13 @@ const Product = ({ item }) => {
           ) : (
             <Button
               sx={{
-                marginTop: '10%',
+                marginTop: '5%',
                 marginLeft: '50%',
                 width: 200,
                 height: 60,
                 fontSize: 20,
               }}
-              color="neutral"
+              color="primary"
               disabled={false}
               variant="soft"
               onClick={() => moveToDetail(item.id)}

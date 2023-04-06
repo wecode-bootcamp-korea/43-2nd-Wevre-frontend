@@ -3,6 +3,7 @@ import MUISelectStandard from './MUISelectStandard/MUISelectStandard';
 import { API } from '../../config';
 import SearchedProducts from './SearchedProducts/SearchedProducts';
 import * as S from './Search.style';
+import { Input } from '@mui/material';
 
 const Search = () => {
   const [searchStandardValue, setSearchStandardValue] = useState('itemName');
@@ -37,7 +38,8 @@ const Search = () => {
     <S.SearchContainer>
       <S.SearchInner>
         <MUISelectStandard setSearchStandardValue={setSearchStandardValue} />
-        <S.SearchInput
+        <Input
+          sx={{ width: '100%', marginTop: 2 }}
           placeholder="검색키워드를 입력하세요."
           name="searchInput"
           onChange={handleInput}
@@ -47,7 +49,6 @@ const Search = () => {
         <S.ResultTitleBox>
           <S.ResultTitle>검색 결과</S.ResultTitle>
         </S.ResultTitleBox>
-
         <S.ResultListBox>
           {searchData.length > 0 &&
             searchData.map(product => (

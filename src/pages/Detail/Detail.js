@@ -16,7 +16,7 @@ const Detail = () => {
   const getPorductData = `${API.ITEMS}/${id}`;
 
   const { loading, data, error } = useFetch(getPorductData);
-
+  console.log(loading);
   return (
     <S.DetailContainer>
       {!loading && !error && (

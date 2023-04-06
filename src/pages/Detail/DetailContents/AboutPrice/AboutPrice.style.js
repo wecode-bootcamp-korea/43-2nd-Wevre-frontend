@@ -17,7 +17,6 @@ export const PriceArea = styled.div`
 `;
 
 export const PriceTxt = styled.span`
-  border-right: 1px solid black;
   padding: 15px 10px 15px 0;
 `;
 
@@ -46,4 +45,10 @@ export const DoBidding = styled.div`
 
 export const ChartArea = styled.div`
   margin: 80px 0;
+`;
+
+export const Button = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

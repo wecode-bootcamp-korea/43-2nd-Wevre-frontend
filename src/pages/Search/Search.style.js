@@ -7,7 +7,10 @@ export const SearchContainer = styled.div`
 `;
 
 export const SearchInner = styled.div`
+  display: flex;
   margin: 140px 0;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SearchInput = styled.input`

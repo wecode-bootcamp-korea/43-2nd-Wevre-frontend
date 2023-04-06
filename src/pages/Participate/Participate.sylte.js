@@ -73,6 +73,7 @@ export const PriceBtn = styled.button`
 export const PriceWrapper = styled.div`
   position: relative;
   height: 80px;
+  margin: 30px;
 `;
 
 export const CurrentPrice = styled.div`
