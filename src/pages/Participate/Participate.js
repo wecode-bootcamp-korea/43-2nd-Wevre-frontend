@@ -27,7 +27,10 @@ const Participate = ({ data }) => {
     if (integerPrice) {
       isSetCheckedOk(true);
       setPrice(integerPrice.toLocaleString());
-      if (integerPrice > (currentPrice && getIntegerPrice(starting_bid)))
+      if (
+        integerPrice > currentPrice &&
+        integerPrice > getIntegerPrice(starting_bid)
+      )
         setIsBidActivation(true);
       else setIsBidActivation(false);
     } else {
@@ -45,7 +48,12 @@ const Participate = ({ data }) => {
 
   const addPrice = addPrice => {
     const integerPrice = getIntegerPrice(price);
-    if (integerPrice + addPrice > currentPrice) setIsBidActivation(true);
+    if (
+      integerPrice + addPrice > currentPrice &&
+      integerPrice + addPrice > getIntegerPrice(starting_bid)
+    )
+      setIsBidActivation(true);
+    else setIsBidActivation(false);
     setPrice((integerPrice + addPrice).toLocaleString());
     isSetCheckedOk(true);
   };

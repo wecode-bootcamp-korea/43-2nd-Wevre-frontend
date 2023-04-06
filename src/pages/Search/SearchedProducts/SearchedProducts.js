@@ -21,6 +21,10 @@ const SearchedProducts = ({ productData }) => {
   } = productData;
 
   const moveToDetail = () => {
+    if (!localStorage.getItem('login-token')) {
+      alert('로그인이 필요한 페이지입니다.');
+      return;
+    }
     if (bidStatus === '낙찰완료') {
       alert('이미 낙찰된 상품입니다.');
       return;

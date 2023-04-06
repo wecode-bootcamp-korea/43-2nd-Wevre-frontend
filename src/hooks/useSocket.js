@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { API } from '../config';
+import { API, SOCKET_URL } from '../config';
 import useFetch from './useFetch';
 
 const useSocket = (initPrice, productId, price) => {
@@ -20,7 +20,7 @@ const useSocket = (initPrice, productId, price) => {
 
   useEffect(() => {
     const ws = new WebSocket(
-      `ws://10.58.52.129:3000/${productId}?accessToken=${loginToken}`
+      `${SOCKET_URL}/${productId}?accessToken=${loginToken}`
     );
 
     ws.onmessage = ({ data }) => {
