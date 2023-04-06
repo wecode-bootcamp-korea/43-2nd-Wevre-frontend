@@ -11,7 +11,6 @@ const Bid = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const items = itemId;
-  const params = useParams();
 
   useEffect(() => {
     fetch(API.BIDS, {
@@ -29,7 +28,6 @@ const Bid = () => {
         setLoading(false);
       });
   }, [list]);
-  console.log(`${items}`);
 
   if (loading) return <div>Loading</div>;
   const goToOrder = () => {
@@ -91,8 +89,8 @@ const Bid = () => {
                   onClick={goToOrder}
                   variant="contained"
                   sx={{
-                    backgroundColor: '#F7E600',
-                    '&:hover': { backgroundColor: '#3A1D1D' },
+                    backgroundColor: '#cdb8f1',
+                    '&:hover': { backgroundColor: '#babbf6' },
                     fontSize: 16,
                   }}
                 >

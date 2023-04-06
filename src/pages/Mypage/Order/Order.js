@@ -132,8 +132,7 @@ const Order = () => {
     })
       .then(res => res.json())
       .then(data => {
-        // window.open(data.data);
-        window.location.href = data.data;
+        window.open(data.data);
       });
     navigate('/mypage');
   };

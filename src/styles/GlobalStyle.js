@@ -7,9 +7,16 @@ const GlobalStyle = createGlobalStyle`
         color: rgba(0,0,0,0.8);
     }
     body {
-        background-color: rgb(245, 245, 247);
+        background-color: rgb(240, 245, 247);
         
     }
+    body{
+        -ms-overflow-style: none;
+        }
+        
+       ::-webkit-scrollbar {
+         display: none;
+       }
     
 `;
 

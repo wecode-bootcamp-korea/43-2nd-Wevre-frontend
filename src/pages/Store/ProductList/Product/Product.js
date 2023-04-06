@@ -5,16 +5,17 @@ import { Card } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './Product.style';
+import swal from 'sweetalert';
 
 const Product = ({ item }) => {
   const navigate = useNavigate();
   const moveToDetail = id => {
     if (!localStorage.getItem('login-token')) {
-      alert('로그인이 필요한 작업입니다.');
+      swal('로그인이 필요한 작업입니다.');
       return;
     }
     if (item.bidStatus === '낙찰완료') {
-      alert('이미 낙찰된 상품입니다.');
+      swal('이미 낙찰된 상품입니다.');
       return;
     } else {
       navigate(`/detail/${id}`);

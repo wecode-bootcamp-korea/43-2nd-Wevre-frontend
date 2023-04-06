@@ -27,8 +27,9 @@ import {
   Input,
   Card,
   CardMedia,
-  Button,
 } from '@mui/material';
+import { Button } from '@mui/joy';
+import swal from 'sweetalert';
 
 //material UI 숫자 입력 3자리 마다 자동 쉼표
 const NumericFormatCustom = React.forwardRef(function NumericFormatCustom(
@@ -139,12 +140,13 @@ const SalesRegistration = () => {
       })
       .then(res => {
         if (res.data.message === 'SUCCESSFULLY_REGISTERED') {
-          alert('상품 등록에 성공했습니다.');
+          swal('등록이 완료되었습니다.');
           navigate('/store');
         }
       })
       .catch(err => alert(err));
   };
+
   return (
     <S.Container>
       <S.CategoryTitle>경매 등록</S.CategoryTitle>
@@ -350,29 +352,23 @@ const SalesRegistration = () => {
             )}
             <Input type="file" name="image" onChange={handleChange} />
           </S.CardText>
-          <Button onClick={sendData}>전송</Button>
         </Card>
+        <Button
+          variant="contained"
+          sx={{
+            display: 'flex',
+            width: '40%',
+            height: '50px',
+            fontSize: '20px',
+            backgroundColor: '#cdb8f1',
+            '&:hover': { backgroundColor: '#babbf6' },
+          }}
+          onClick={sendData}
+        >
+          전송
+        </Button>
       </S.CardBox>
     </S.Container>
   );
 };
 export default SalesRegistration;
-
-<TextField
-  sx={{ width: 500 }}
-  label="직품 설명"
-  placeholder="작품 설명을 적어주세요."
-/>;
-
-<Card
-  sx={{
-    display: 'flex',
-    width: '40%',
-    height: 400,
-    marginBottom: '50px',
-  }}
->
-  <S.CardText>
-    <S.Title>제품상세</S.Title>
-  </S.CardText>
-</Card>;
