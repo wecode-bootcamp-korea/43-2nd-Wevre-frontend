@@ -116,19 +116,22 @@ Kream이라는 사이트를 참고하여 [한정판, 경매] 두 가지 방식�
 ---
 
 ### 구현 영상
-**메인**
-![메인](https://user-images.githubusercontent.com/114940636/230558607-1e49b14b-b246-483f-8150-f3385bc32801.gif)
-**로그인**
-![로그인](https://user-images.githubusercontent.com/114940636/230558616-9953a6fb-2bd6-494d-ab3b-ab097702666d.gif)
-**스토어**
-![스토어](https://user-images.githubusercontent.com/114940636/230558603-fc613385-fb63-4f49-9127-b918b4bf6408.gif)
-**검색**
-![검색](https://user-images.githubusercontent.com/114940636/230558629-6b47362d-a77b-424a-9bc0-806dbd06a653.gif)
-**정렬**
-![정렬](https://user-images.githubusercontent.com/114940636/230558572-a6b4db64-84d9-4a13-acc1-3d5f6f567a5b.gif)
-**위시리스트**
-![위시리스트](https://user-images.githubusercontent.com/114940636/230558594-dc4321d7-6b63-4094-94c4-1f32035d06c5.gif)
-**디테일/입찰**
-![디테일 입찰](https://user-images.githubusercontent.com/114940636/230558621-ddb3520c-1af8-4a76-b2e2-6cec83011551.gif)
 
-
+| 컴포넌트                 | 기능영상                                                                                                                         | 담당 개발자                           |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| 메인             | <img src="https://user-images.githubusercontent.com/114940636/230558607-1e49b14b-b246-483f-8150-f3385bc32801.gif" width="520" height="320" /> | - 프론트엔드 : 김진평 <br> - 백엔드 :        |
+| 로그인                 | <img src="https://user-images.githubusercontent.com/114940636/230558616-9953a6fb-2bd6-494d-ab3b-ab097702666d.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :        |
+| 스토어                 | <img src="https://user-images.githubusercontent.com/114940636/230558603-fc613385-fb63-4f49-9127-b918b4bf6408.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :        |
+| 검색                  | <img src="https://user-images.githubusercontent.com/114940636/230558629-6b47362d-a77b-424a-9bc0-806dbd06a653.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :        |
+|정렬                | <img src="https://user-images.githubusercontent.com/114940636/230558572-a6b4db64-84d9-4a13-acc1-3d5f6f567a5b.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :       |
+|위시리스트                | <img src="https://user-images.githubusercontent.com/114940636/230558594-dc4321d7-6b63-4094-94c4-1f32035d06c5.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :        |
+| 디테일 입찰         | <img src="https://user-images.githubusercontent.com/114940636/230558621-ddb3520c-1af8-4a76-b2e2-6cec83011551.gif" width="520" height="320"/> | - 프론트엔드 : 김진평 <br> - 백엔드 :         |
+| 마이페이지      | <img src="https://user-images.githubusercontent.com/124610396/232273266-fb7dd3f5-0c5c-489c-b135-a8a71f1638df.gif" width="520" height="320"/>| - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 자격등록     | <img src="https://user-images.githubusercontent.com/124610396/232273310-f035a477-09b2-4e28-83ff-f3bea107622e.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 작품등록             | <img src = "https://user-images.githubusercontent.com/124610396/232273322-c2fbd57e-da68-4b84-ae2a-c0f06e6ee4f9.gif" width="520px" height="320"> | -프론트엔드 : 유정인 <br> -백엔드 :       |
+| 작품등록 리스트     | <img src="https://user-images.githubusercontent.com/124610396/232273424-ae2215c8-f639-463c-a99e-37b781f2662d.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 주문-카카오주소API     | <img src="https://user-images.githubusercontent.com/124610396/232273473-3ad2b44e-85a0-488f-adf8-24791a40f5f6.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 결제-카카오페이결제API     | <img src="https://user-images.githubusercontent.com/124610396/232273486-dc8718c1-6d8e-4ae5-b087-61791b9f1f61.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+|입찰내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 결제내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 판매내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
