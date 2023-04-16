@@ -129,7 +129,7 @@ Kream이라는 사이트를 참고하여 [한정판, 경매] 두 가지 방식�
 | 마이페이지      | <img src="https://user-images.githubusercontent.com/124610396/232273266-fb7dd3f5-0c5c-489c-b135-a8a71f1638df.gif" width="520" height="320"/>| - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 자격등록     | <img src="https://user-images.githubusercontent.com/124610396/232273310-f035a477-09b2-4e28-83ff-f3bea107622e.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 작품등록             | <img src = "https://user-images.githubusercontent.com/124610396/232273322-c2fbd57e-da68-4b84-ae2a-c0f06e6ee4f9.gif" width="520px" height="320"> | -프론트엔드 : 유정인 <br> -백엔드 :       |
-| 작품등록 리스트     | <img src="https://user-images.githubusercontent.com/124610396/232273424-ae2215c8-f639-463c-a99e-37b781f2662d.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+| 작품등     | <img src="https://user-images.githubusercontent.com/124610396/232273424-ae2215c8-f639-463c-a99e-37b781f2662d.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 주문-카카오주소API     | <img src="https://user-images.githubusercontent.com/124610396/232273473-3ad2b44e-85a0-488f-adf8-24791a40f5f6.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 결제-카카오페이결제API     | <img src="https://user-images.githubusercontent.com/124610396/232273486-dc8718c1-6d8e-4ae5-b087-61791b9f1f61.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 |입찰내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
