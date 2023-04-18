@@ -21,17 +21,21 @@ const ProductList = () => {
   const getProductsDataUrl = `${API.ITEMS}?category=${CATE_LIST[categoryId]}&sorting=${searchSortValue}`;
 
   const takeAllProducts = () => {
-    fetch(getProductsDataUrl)
-      .then(res => res.json())
-      .then(data => setTotalCount(data.items.length));
+    if (categoryId) {
+      fetch(getProductsDataUrl)
+        .then(res => res.json())
+        .then(data => setTotalCount(data.items.length));
+    }
   };
 
   const takeOneProduct = () => {
-    fetch(`${getProductsDataUrl}&offset=${offset}&limit=${LIMIT}`)
-      .then(res => res.json())
-      .then(data =>
-        setItemList(offset === 0 ? data.items : [...itemList, data.items[0]])
-      );
+    if (categoryId) {
+      fetch(`${getProductsDataUrl}&offset=${offset}&limit=${LIMIT}`)
+        .then(res => res.json())
+        .then(data =>
+          setItemList(offset === 0 ? data.items : [...itemList, data.items[0]])
+        );
+    }
   };
 
   useEffect(() => {
