@@ -47,7 +47,7 @@ const ProductInfo = ({ info }) => {
 
   useEffect(() => {
     fetch(API.WISHLIST, getParams)
-      .then(res => res.ok && res.json())
+      .then(res => res.json())
       .then(data => setWishListData(data.data));
   }, []);
 
