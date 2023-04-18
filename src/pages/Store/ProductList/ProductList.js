@@ -69,7 +69,6 @@ const ProductList = () => {
     }
   }, [itemList]);
 
-  console.log('aaa', params);
   return (
     <article>
       {!categoryId ? (
