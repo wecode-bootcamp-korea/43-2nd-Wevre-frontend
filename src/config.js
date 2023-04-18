@@ -1,5 +1,5 @@
-const BASE_URL = 'http://10.58.52.117:3000';
-export const SOCKET_URL = 'ws://10.58.52.117:3000';
+const BASE_URL = 'http://13.125.104.56:3000';
+export const SOCKET_URL = 'ws://13.125.104.56:3000';
 
 export const API = {
   MAIN: `${BASE_URL}/`,
