@@ -6,7 +6,6 @@ import * as S from './SignIn.style';
 
 const User = () => {
   const location = useLocation();
-  console.log(KAKAO_AUTH_URL);
   const handleHref = () => {
     localStorage.setItem(
       'before-address',

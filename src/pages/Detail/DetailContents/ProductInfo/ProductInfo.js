@@ -36,9 +36,18 @@ const ProductInfo = ({ info }) => {
     }
   });
 
+  const loginToken = localStorage.getItem('login-token');
+  const getParams = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: loginToken,
+    },
+  };
+
   useEffect(() => {
     fetch(API.WISHLIST, getParams)
-      .then(res => res.json())
+      .then(res => res.ok && res.json())
       .then(data => setWishListData(data.data));
   }, []);
 
@@ -56,15 +65,6 @@ const ProductInfo = ({ info }) => {
   //const getAllWishList = '/data/wishlistOne.json';
 
   const getAllWishList = `${API.WISHLIST}`;
-
-  const loginToken = localStorage.getItem('login-token');
-  const getParams = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: loginToken,
-    },
-  };
 
   const toggleItemToWishList = id => {
     const toggleUrl = `${getAllWishList}/items/${id}`;
