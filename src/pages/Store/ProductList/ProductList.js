@@ -21,15 +21,24 @@ const ProductList = () => {
   const getProductsDataUrl = `${API.ITEMS}?category=${CATE_LIST[categoryId]}&sorting=${searchSortValue}`;
 
   const takeAllProducts = () => {
-    if (categoryId) {
-      fetch(getProductsDataUrl)
-        .then(res => res.json())
-        .then(data => setTotalCount(data.items.length));
+    try {
+      if (categoryId) {
+        fetch(getProductsDataUrl)
+          .then(res => {
+            if (res.ok) res.json();
+            else throw new Error(res);
+          })
+          .then(data => {
+            if (data) setTotalCount(data.items.length);
+          });
+      }
+    } catch (err) {
+      alert(err);
     }
   };
 
   const takeOneProduct = () => {
-    if (categoryId) {
+    if (categoryId && totalCount > 0) {
       fetch(`${getProductsDataUrl}&offset=${offset}&limit=${LIMIT}`)
         .then(res => res.json())
         .then(data =>
