@@ -39,7 +39,7 @@ const Participate = ({ data }) => {
       setIsBidActivation(false);
     }
   };
-
+  console.log(isCheckedOk);
   const floorOnesPlace = ({ target }) => {
     const { value } = target;
     const integerPrice = getIntegerPrice(value);
@@ -82,7 +82,7 @@ const Participate = ({ data }) => {
             />
             <S.PriceTxt>원</S.PriceTxt>
           </S.SetPrice>
-          <S.GuideBox isCheckedOk={isCheckedOk}>
+          <S.GuideBox checked={isCheckedOk}>
             입찰가는 숫자만 입력 가능합니다. 다시 입력해주시기 바랍니다.
           </S.GuideBox>
           <Box
@@ -103,7 +103,7 @@ const Participate = ({ data }) => {
                   },
                 }}
                 key={price.id}
-                isCheckedOk={isCheckedOk}
+                checked={isCheckedOk}
                 onClick={() => addPrice(price.value)}
               >
                 {price.text}

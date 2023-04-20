@@ -30,12 +30,14 @@ const useSocket = (initPrice, productId, price) => {
     );
 
     ws.onmessage = ({ data }) => {
+      console.log('enter data', data);
       setCurrentPrice(Number(JSON.parse(data)[0].highest_bid));
       setMyBiddingPrice(Number(JSON.parse(data)[1].last_bid));
       setChartData(JSON.parse(data)[2]);
     };
 
     if (price) {
+      console.log('enter socket', price);
       ws.onopen = () => {
         ws.send(price);
       };

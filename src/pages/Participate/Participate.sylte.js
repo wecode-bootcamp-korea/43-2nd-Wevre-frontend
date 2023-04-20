@@ -43,7 +43,7 @@ export const StyledInput = styled(MUIInput)`
   padding: 0 10px;
 `;
 export const GuideBox = styled.div`
-  display: ${props => (props.isCheckedOk ? 'none' : 'block')};
+  display: ${props => (props.checked ? 'none' : 'block')};
   position: absolute;
   right: 7%;
   padding: 15px 30px 0 0;
@@ -58,8 +58,7 @@ export const BtnWrapper = styled.div`
 `;
 
 export const PriceBtn = styled.button`
-  margin: ${props =>
-    props.isCheckedOk ? '20px 10px 40px 0' : '50px 10px 10px 0'};
+  margin: ${props => (props.checked ? '20px 10px 40px 0' : '50px 10px 10px 0')};
   padding: 10px;
   width: 30%;
   border: 1px solid black;
