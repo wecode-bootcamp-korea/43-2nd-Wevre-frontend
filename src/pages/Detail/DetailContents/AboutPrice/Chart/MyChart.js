@@ -3,20 +3,24 @@ import {
   Chart as ChartJS,
   BarElement,
   LineElement,
+  LineController,
   PointElement,
   CategoryScale,
   LinearScale,
   Tooltip,
   Legend,
+  BarController,
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
 
 ChartJS.register(
+  LineController,
+  BarController,
   BarElement,
-  LineElement,
   PointElement,
   CategoryScale,
   LinearScale,
+  LineElement,
   Tooltip,
   Legend
 );
