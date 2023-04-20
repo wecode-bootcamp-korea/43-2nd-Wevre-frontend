@@ -48,6 +48,7 @@ const ProductList = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     takeAllProducts();
   }, [categoryId]);
 
