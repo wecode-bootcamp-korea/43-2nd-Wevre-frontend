@@ -25,7 +25,7 @@ const ProductList = () => {
       if (categoryId) {
         fetch(getProductsDataUrl)
           .then(res => {
-            if (res.ok) res.json();
+            if (res.ok) return res.json();
             else throw new Error(res);
           })
           .then(data => {
