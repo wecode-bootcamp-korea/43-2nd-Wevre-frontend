@@ -24,7 +24,7 @@ export const CardText = styled.div`
 export const CategoryTitle = styled.h1`
   display: flex;
   justify-content: center;
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 30px;
 `;
 

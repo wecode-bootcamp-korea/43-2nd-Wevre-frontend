@@ -1,9 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { API } from '../../../config';
-import { Avatar, Card, CardMedia } from '@mui/material';
-import { Button } from '@mui/joy';
-import useFetch from '../../../hooks/useFetch';
+import { Avatar, Card } from '@mui/material';
 import * as S from './UserInfo.style';
 
 const UserInfo = () => {
@@ -78,34 +76,6 @@ const UserInfo = () => {
           </S.UserQaulDetail>
         </S.UserInfoBox>
       </Card>
-      {/* <Card
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '20px',
-          width: '100%',
-          marginBottom: '50px',
-        }}
-      >
-        <S.Wishlist>
-          <S.Title>위시리스트</S.Title>
-          <S.WishlistContainer>
-            {!loading &&
-              piece.map(piece => (
-                <Card key={piece.id}>
-                  <CardMedia
-                    sx={{ width: 300, height: 300 }}
-                    component="img"
-                    image={piece.image}
-                  />
-                  <S.CardTitle>{piece.title}</S.CardTitle>
-                  <S.CardArtist>{piece.artist}</S.CardArtist>
-                </Card>
-              ))}
-          </S.WishlistContainer>
-        </S.Wishlist>
-      </Card> */}
     </S.CategoryContainer>
   );
 };

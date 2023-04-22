@@ -5,10 +5,8 @@ import { Button, Box } from '@mui/joy';
 import { QUAL_INFO } from './QUAL_INFO';
 import swal from 'sweetalert';
 import * as S from './BuyerQualification.style';
-import { useNavigate } from 'react-router-dom';
 
 const BuyerQualification = () => {
-  const navigate = useNavigate();
   const handleAgreeButton = () => {
     fetch(API.BUYER, {
       method: 'PATCH',
@@ -18,7 +16,7 @@ const BuyerQualification = () => {
       },
     })
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => data);
     swal('등록이 완료되었습니다.');
   };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
 import ReactDaumPost from 'react-daumpost-hook';
-
 import { API } from '../../../config';
 import {
   Card,
@@ -14,7 +14,6 @@ import {
 import PropTypes from 'prop-types';
 import { IMaskInput } from 'react-imask';
 import * as S from './Order.style';
-import { useNavigate, useParams } from 'react-router';
 
 //MUI INPUT 전화번호 자동 하이픈 입력 함수
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
@@ -49,11 +48,10 @@ const Order = () => {
     zipcode: '',
     price: Number.MAX_SAFE_INTEGER,
   });
-  const { street, address, zipcode, phoneNumber } = addressData;
+  const { street, address, zipcode } = addressData;
   const params = useParams();
 
   const {
-    itemId,
     imageUrl,
     userName,
     userEmail,
@@ -136,7 +134,7 @@ const Order = () => {
       });
     navigate('/mypage');
   };
-  console.log(addressData);
+
   if (loading) return <div>Loading</div>;
 
   return (

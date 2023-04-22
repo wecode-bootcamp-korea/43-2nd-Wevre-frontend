@@ -3,14 +3,18 @@ import styled from 'styled-components';
 export const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   display: 10px;
-  padding: 50px;
 `;
 
 export const Title = styled.h1`
-  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 50px;
 `;
 
 export const BidList = styled.div`

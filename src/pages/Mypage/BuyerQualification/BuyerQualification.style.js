@@ -6,7 +6,7 @@ export const BuyerSection = styled.div`
 
 export const Title = styled.h1`
   margin: 5vh;
-  font-size: 26px;
+  font-size: 30px;
 `;
 
 export const BuyerTextBox = styled.div`

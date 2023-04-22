@@ -6,6 +6,6 @@ export const SellerQualContainer = styled.div`
 
 export const Title = styled.h1`
   margin: 5vh;
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 50px;
 `;
