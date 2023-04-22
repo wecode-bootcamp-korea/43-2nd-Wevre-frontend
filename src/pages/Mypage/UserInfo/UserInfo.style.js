@@ -2,9 +2,10 @@ import theme from '../../../styles/theme';
 import styled from 'styled-components';
 
 export const CategoryContainer = styled.div`
-  ${theme.mixins.flexBox('center', 'center')}
+  ${theme.mixins.flexBox('center', '')}
   flex-direction: column;
   width: 100%;
+  padding: 20px;
 `;
 
 export const UserInfoBox = styled.div`
@@ -12,16 +13,15 @@ export const UserInfoBox = styled.div`
   justify-content: space-around;
   height: 30%;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 export const Title = styled.h1`
   margin: 5vh;
-  font-size: 26px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
-  font-size: ${({ theme }) => theme.sizes.large};
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 export const UserInfoDetail = styled.div`
@@ -36,7 +36,8 @@ export const UserQaulDetail = styled.div`
 
 export const UserQaulDetailTitle = styled.h1`
   font-size: 16px;
-  line-height: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
 `;
 
 export const UserQaulDetailText = styled.h2`

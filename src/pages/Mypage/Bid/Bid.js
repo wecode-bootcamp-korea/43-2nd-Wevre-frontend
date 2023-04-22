@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
 import { API } from '../../../config';
 import { Card, CardMedia, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +12,7 @@ const Bid = () => {
   const items = itemId;
 
   useEffect(() => {
+    setLoading(true);
     fetch(API.BIDS, {
       method: 'GET',
       headers: {
@@ -28,23 +28,17 @@ const Bid = () => {
       });
   }, []);
 
-  const goToOrder = () => {
-    navigate(`/orders/${items}`);
-  };
   return (
     <S.CategoryContainer>
       <S.Title>입찰 내역</S.Title>
       <S.BidList>
-        {list.length > 0 ? (
-          <></>
-        ) : (
+        {list.length > 0 &&
           list.map(items => {
             const {
               itemId,
               itemName,
               authorName,
               startingBid,
-              currentPrice,
               bidStatus,
               biddingEnd,
               imageUrl,
@@ -64,11 +58,11 @@ const Bid = () => {
                   display: 'flex',
                   justifyContent: 'space-around',
                   alignItems: 'center',
-                  width: '80%',
+                  width: '100%',
                   height: '100%',
                   padding: '50px',
                   marginBottom: '5vh',
-                  backgroundColor: 'rgba(0,0,0,0.01)',
+                  backgroundColor: '#ffffff',
                 }}
               >
                 <CardMedia
@@ -89,13 +83,13 @@ const Bid = () => {
                 </S.CardBox>
                 {bidStatus === '낙찰완료' ? (
                   <Button
-                    onClick={goToOrder}
                     variant="contained"
                     sx={{
                       backgroundColor: '#cdb8f1',
                       '&:hover': { backgroundColor: '#babbf6' },
                       fontSize: 16,
                     }}
+                    onClick={() => navigate(`/orders/${itemId}`)}
                   >
                     주문 하기
                   </Button>
@@ -107,14 +101,14 @@ const Bid = () => {
                       fontSize: 16,
                       '&:hover': { backgroundColor: 'rgba(0, 0, 0, 1)' },
                     }}
+                    onClick={() => navigate(`/detail/${itemId}`)}
                   >
                     입찰 하기
                   </Button>
                 )}
               </Card>
             );
-          })
-        )}
+          })}
       </S.BidList>
     </S.CategoryContainer>
   );

@@ -9,14 +9,11 @@ import {
   MenuItem,
   TextField,
   Card,
-  Alert,
 } from '@mui/material';
 import * as S from './SellerQualification.style';
-import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 
 const SellerQualification = () => {
-  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     bankName: '',
     bankAccount: '',
@@ -38,7 +35,7 @@ const SellerQualification = () => {
       body: JSON.stringify(inputValue),
     })
       .then(res => res.json())
-      .then(data => {});
+      .then(data => data);
     swal('등록이 완료되었습니다.');
   };
 

@@ -342,15 +342,15 @@ const SalesRegistration = () => {
         >
           <S.CardText>
             <S.Title>작품 사진 첨부</S.Title>
-            {formdata.image && (
-              <CardMedia
-                sx={{ maxWidth: 300, maxHeight: 300 }}
-                component="img"
-                name="image"
-                image={formdata.image}
-              />
-            )}
-            <Input type="file" name="image" onChange={handleChange} />
+
+            <CardMedia
+              sx={{ maxWidth: 300, maxHeight: 300 }}
+              component="img"
+              name="image"
+              image={formdata.image}
+            />
+
+            <Input type="file" name="image" onChange={handleFile} />
           </S.CardText>
         </Card>
         <Button

@@ -20,14 +20,6 @@ export const SUB_TITLE = {
     },
     {
       id: 4,
-      value: '구매 내역',
-    },
-    {
-      id: 5,
-      value: '판매 내역',
-    },
-    {
-      id: 6,
       value: '판매 등록',
     },
   ],
