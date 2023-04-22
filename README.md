@@ -132,6 +132,8 @@ Kream이라는 사이트를 참고하여 [한정판, 경매] 두 가지 방식�
 | 작품등     | <img src="https://user-images.githubusercontent.com/124610396/232273424-ae2215c8-f639-463c-a99e-37b781f2662d.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 주문-카카오주소API     | <img src="https://user-images.githubusercontent.com/124610396/232273473-3ad2b44e-85a0-488f-adf8-24791a40f5f6.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 결제-카카오페이결제API     | <img src="https://user-images.githubusercontent.com/124610396/232273486-dc8718c1-6d8e-4ae5-b087-61791b9f1f61.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
-|입찰내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+|입찰내역     | <img src="https://user-images.githubusercontent.com/124610396/233789550-448f7b06-f659-457a-825d-58dc57f2b4d2.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 결제내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
 | 판매내역     | <img src="https://user-images.githubusercontent.com/124610396/226344520-7456e9d9-6447-49fe-a540-c3558bd3cd8c.gif" width="520" height="320"/> | - 프론트엔드 : 유정인 <br> - 백엔드 :         |
+
+
