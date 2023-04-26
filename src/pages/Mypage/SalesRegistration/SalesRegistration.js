@@ -81,16 +81,10 @@ const SalesRegistration = () => {
 
   const handleFile = event => {
     const selectedFile = event.target.files[0];
-    const fileReader = new FileReader();
-
-    fileReader.readAsDataURL(selectedFile);
-
-    fileReader.onload = function () {
-      setFormdata({
-        ...formdata,
-        image: fileReader.result,
-      });
-    };
+    setFormdata({
+      ...formdata,
+      image: selectedFile,
+    });
   };
 
   const [toggle, setToggle] = useState(false);
@@ -124,15 +118,14 @@ const SalesRegistration = () => {
 
   const sendData = () => {
     const sendFormData = new FormData();
-    Object.keys(formdata).map(data =>
-      sendFormData.append(data, formdata[data])
-    );
+    Object.keys(formdata).forEach(key => {
+      sendFormData.append(key, formdata[key]);
+    });
     for (let a of sendFormData.values()) {
       console.log(a);
     }
     axios
       .post(API.ITEMS, sendFormData, {
-        method: 'POST',
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: localStorage.getItem('login-token'),
